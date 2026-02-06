@@ -921,7 +921,7 @@ img {
 }
 
 .bg-quality {
-    background-image: url(../../cdn.davisawning.com/assets/bg-quality.jpg);
+    background-image: url(../assets/bg-quality.jpg);
 }
 
 .margin-top-10 {
@@ -1405,7 +1405,7 @@ table td[class*="col-"], table th[class*="col-"] {
     --bs-modal-width: 500px;
     --bs-modal-padding: 1rem;
     --bs-modal-margin: 0.5rem;
-    --bs-modal-color:;
+    /*--bs-modal-color: ;*/
     --bs-modal-bg: #ffffff;
     --bs-border-width: 1px;
     --bs-border-color: #dee2e6;
@@ -1424,7 +1424,7 @@ table td[class*="col-"], table th[class*="col-"] {
     --bs-modal-header-border-width: var(--bs-border-width);
     --bs-modal-title-line-height: 1.5;
     --bs-modal-footer-gap: 0.5rem;
-    --bs-modal-footer-bg:;
+    /*--bs-modal-footer-bg:;*/
     --bs-modal-footer-border-color: var(--bs-border-color);
     --bs-modal-footer-border-width: var(--bs-border-width);
     position: fixed;
@@ -1565,7 +1565,7 @@ table td[class*="col-"], table th[class*="col-"] {
 @media (min-width: 576px) {
     .modal {
         --bs-modal-margin: 1.75rem;
-        --bs-modal-box-shadow: var(--bs-box-shadow);
+        /*--bs-modal-box-shadow: var(--bs-box-shadow);*/
     }
 
     .modal-dialog {
@@ -1725,3 +1725,4 @@ table td[class*="col-"], table th[class*="col-"] {
     .modal-fullscreen-xxl-down .modal-body {
         overflow-y: auto;
     }
+}
