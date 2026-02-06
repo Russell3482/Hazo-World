@@ -9,18 +9,18 @@ body {
 }
 
 a {
-    color: #c2272d;
+    color: #365A5A;
     text-decoration: none;
 }
 
 a:hover {
-    color: #e7464b;
+    color: #627E7E;
     text-decoration: none;
 }
 
 a:focus, a:active {
     outline: none;
-    color: #e7464b;
+    color: #627E7E;
 }
 
 .hover-color {
@@ -32,7 +32,7 @@ a:focus, a:active {
 }
 
 a.hover-color:hover, a.hover-color-black:hover {
-    color: #c2272d;
+    color: #365A5A;
 }
 
 a.hover-color-blue {
@@ -693,7 +693,7 @@ a.hover-color-blue:focus, a.hover-color-blue:active {
 }
 
 .luxbar-menu-white .active, .luxbar-menu-white .luxbar-item:hover {
-    background-color: #c2272d;
+    background-color: #365A5A;
     color: #ffffff;
 }
 
@@ -774,8 +774,8 @@ p {
     color: #f1f1f1;
 }
 
-.text-red {
-    color: #c2272d;
+.text-primary {
+    color: #365A5A;
 }
 
 .text-blue {
@@ -1088,24 +1088,39 @@ img {
     text-decoration: none;
 }
 
-.btn-red {
+/* theme primary: #365A5A */
+
+.text-primary {
+    color: #365A5A;
+}
+
+.btn-primary {
     color: #fff;
     font-size: 14px;
-    background-color: #c2272d;
-    border-color: #c2272d;
+    background-color: #365A5A;
+    border-color: #365A5A;
 }
 
-.btn-red:focus, .btn-red.focus {
+.btn-primary:hover {
     color: #fff;
-    background-color: #e7464b;
-    border-color: #e7464b;
+    background-color: #2C4A4A;   /* hover 深一点 */
+    border-color: #2C4A4A;
 }
 
-.btn-red:hover {
+.btn-primary:focus,
+.btn-primary.focus {
     color: #fff;
-    background-color: #e7464b;
-    border-color: #e7464b;
+    background-color: #2C4A4A;
+    border-color: #2C4A4A;
 }
+
+.btn-primary:active,
+.btn-primary.active {
+    color: #fff;
+    background-color: #233C3C;   /* active 再深一点 */
+    border-color: #233C3C;
+}
+
 
 .btn-transparent {
     color: #2c2c2c;
@@ -1116,14 +1131,14 @@ img {
 
 .btn-transparent:focus, .btn-transparent.focus {
     color: #fff;
-    background-color: #c2272d;
-    border-color: #c2272d;
+    background-color: #365A5A;
+    border-color: #365A5A;
 }
 
 .btn-transparent:hover {
     color: #fff;
-    background-color: #c2272d;
-    border-color: #c2272d;
+    background-color: #365A5A;
+    border-color: #365A5A;
 }
 
 .btn-radius {
@@ -1726,3 +1741,6 @@ table td[class*="col-"], table th[class*="col-"] {
         overflow-y: auto;
     }
 }
+
+
+
