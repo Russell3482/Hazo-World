@@ -2,220 +2,17 @@
 {% set activeNav = "about" %}
 {% set showLanguageLink = false %}
 {% set plainFeedbackLink = false %}
+{% set pageUrl = '/about/' %}
+{% set pageTitle = "About DAVIS - DAVIS" %}
+{% set pageKeywords = "DAVIS" %}
+{% set pageDescription = "DAVIS was founded in 1992, focusing on the production of outdoor sunshade products." %}
+{% set pageOgImage = '/static/assets/leader.jpg' | url %}
+{% set pageOgImageAlt = "About DAVIS" %}
+{% set pageAppleTouchIcon = '/static/assets/hazo_logo.webp' | url %}
+{% set pageAppTitle = "DAVIS" %}
+{% set breadcrumbTitle = "About DAVIS" %}
 
 {% block head %}
-    <link rel="canonical" href="{{ '/about/' | url }}">
-    <link rel="alternate" hreflang="en" href="{{ '/about/' | url }}">
-    <meta property="og:url" content="{{ '/about/' | url }}">
-    <title>About DAVIS - DAVIS</title>
-    <meta name="keywords" content="DAVIS">
-    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="{{ '/static/assets/favicon.png' | url }}">
-    <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">    <meta property="og:type" content="website">
-    <meta property="og:title" content="About DAVIS - DAVIS">
-    <meta property="og:description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <meta property="og:image" content="{{ '/static/assets/leader.jpg' | url }}">
-    <meta property="og:image:secure_url" content="{{ '/static/assets/leader.jpg' | url }}">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="About DAVIS">
-    <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
-    <link rel="apple-touch-icon" href="{{ '/static/assets/hazo_logo.webp' | url }}">
-    <meta name="apple-mobile-web-app-title" content="DAVIS">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "AboutPage",
-        "url": "https://davisawning.com/about/",
-        "name": "DAVIS",
-        "headline":"About DAVIS - DAVIS",
-        "description":"DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.",
-        "lastReviewed":"2025-12-31T09:42:54+00:00",
-        "reviewedBy": {
-          "@type": "Organization",
-          "name": "DAVIS"
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://davisawning.com"
-        },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "name": "{{ '/static/assets/leader.jpg' | url }}"
-        },
-        "image": {
-          "@type": "ImageObject",
-          "url": "{{ '/static/assets/leader.jpg' | url }}",
-          "width": 1200,
-          "height": 630
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "DAVIS",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ '/static/assets/logo.jpg' | url }}",
-            "width": 181,
-            "height": 60
-          }
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Davis Sunshade factory - Introduction",
-        "description": "Foshan Davis Outdoor Products Co., Ltd. is a leading manufacturer of outdoor sunshade, dedicated to the design, development, production and sales of leisure outdoor products.",
-        "thumbnailUrl": [
-          "{{ '/static/video/davis-sunshade-factory-introduction.jpg' | url }}"
-        ],
-        "uploadDate": "2024-09-10T00:00:00+00:00",
-        "duration": "PT2M31S",
-        "embedUrl": "https://www.youtube.com/embed/iq1f2vp3LTo",
-        "interactionStatistic": {
-          "@type": "InteractionCounter",
-          "interactionType": { "@type": "WatchAction" },
-          "userInteractionCount": 1852
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "DAVIS",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "{{ '/static/assets/logo.jpg' | url }}",
-            "width": 181,
-            "height": 60
-          }
-        }
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "image": "{{ '/static/about/about.jpg' | url }}",
-        "name": "DAVIS",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Shashui industrial zone, Songgang, Shishan Town, Nanhai District",
-          "addressLocality": "Foshan",
-          "addressRegion": "GD",
-          "postalCode": "528234",
-          "addressCountry": "CN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 23.1679444,
-          "longitude": 113.1262222
-        },
-        "url": "https://davisawning.com",
-        "email": "melissa@davisawning.com",
-        "telephone": "+86-135-2891-5770",
-        "priceRange": "$$$"
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "url": "https://davisawning.com",
-        "logo": "{{ '/static/assets/davis-logo.png' | url }}",
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "telephone": "+86-135-2891-5770",
-          "contactType": "sales"
-        }]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [{
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://davisawning.com"
-        },{
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About DAVIS",
-          "item": "https://davisawning.com/about/"
-        }]
-      }
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('consent', 'default', {
-        analytics_storage: 'denied',
-        ad_storage: 'denied',
-        ad_user_data: 'denied',
-        ad_personalization: 'denied',
-        wait_for_update: 500,
-        region: [
-          'CA', 'US-CA', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'
-        ],
-      });
-      gtag('set', 'url_passthrough', true);
-      gtag('set', 'ads_data_redaction', true);
-    </script>
-    <script>
-      if (localStorage['gtag.consent.option'] !== undefined) {
-        const option = JSON.parse(localStorage['gtag.consent.option']);
-        gtag('consent', 'update', option);
-      }
-    </script>
-    <script>
-      window.addEventListener('load',function() {
-        document.addEventListener('click', function (e) {
-        const btnAcceptCookie = e.target.closest('#cookie-bar > div > button.btn.btn-primary.btn-radius.margin-right-15');
-          if (btnAcceptCookie === null) return;
-          const option = {
-            'analytics_storage': 'granted',
-            'ad_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted'
-          };
-          gtag('consent', 'update', option);
-          localStorage['gtag.consent.option'] = JSON.stringify(option);
-        });
-      });
-    </script>
-    <script>
-      window.addEventListener('load',function() {
-        document.addEventListener('click', function (e) {
-        const btnRejectCookie = e.target.closest('#cookie-bar > div > button.btn.btn-transparent.btn-radius');
-          if (btnRejectCookie === null) return;
-          const option = {
-            'analytics_storage': 'denied',
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied'
-          };
-          gtag('consent', 'update', option);
-          localStorage.removeItem('gtag.consent.option');
-        });
-      });
-    </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G64KLDXVRF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-G64KLDXVRF');
-    </script>
-    <script>
-      window.addEventListener('load', function (event) {
-        document.querySelectorAll('[href*="mailto:"]').forEach(function (e) {
-          e.addEventListener('click', function () {
-            gtag('event', 'email_feedback', { 'send_to': 'G-G64KLDXVRF' });
-          });
-        });
-      });
-    </script>
 {% endblock %}
 
 {% block content %}
@@ -236,7 +33,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-manufacturing-base.webp' | url }}" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-manufacturing-base.html' | url }}" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-manufacturing-base.jpg' | url }}" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Manufacturing Base</p>
@@ -245,7 +42,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-showroom.webp' | url }}" alt="Showroom" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-showroom.html' | url }}" alt="Showroom" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-showroom.jpg' | url }}" alt="Showroom" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Showroom</p>
@@ -254,7 +51,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-completed-projects.webp' | url }}" alt="Completed Projects" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-completed-projects.html' | url }}" alt="Completed Projects" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-completed-projects.jpg' | url }}" alt="Completed Projects" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Completed Projects</p>
@@ -263,7 +60,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-export-to-70-countries.webp' | url }}" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-export-to-70-countries.html' | url }}" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-export-to-70-countries.jpg' | url }}" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Export To 70+ Countries</p>
@@ -272,7 +69,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-30-rd-team-members.webp' | url }}" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-30-rd-team-members.html' | url }}" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-30-rd-team-members.jpg' | url }}" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">30+ R&D Team Members</p>
@@ -281,7 +78,7 @@
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
           <source type="image/webp" srcset="{{ '/static/about/icon-200-national-patents.webp' | url }}" alt="200+ National Patents" width="400" height="150" class="img-responsive">
-          <img src="{{ '/static/about/icon-200-national-patents.html' | url }}" alt="200+ National Patents" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-200-national-patents.jpg' | url }}" alt="200+ National Patents" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">200+ National Patents</p>

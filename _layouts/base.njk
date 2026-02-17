@@ -1,13 +1,168 @@
 <!doctype html>
 <html lang="en">
 <head>
+  {% set pageUrl = pageUrl or '/' %}
+  {% set pageTitle = pageTitle or 'DAVIS: Motorized Awning Factory Since 1992' %}
+  {% set pageKeywords = pageKeywords or 'DAVIS' %}
+  {% set pageDescription = pageDescription or 'DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.' %}
+  {% set pageOgImage = pageOgImage or ('/static/assets/leader.jpg' | url) %}
+  {% set pageOgImageAlt = pageOgImageAlt or 'DAVIS' %}
+  {% set pageAppleTouchIcon = pageAppleTouchIcon or ('/static/assets/davis-icon.jpg' | url) %}
+  {% set pageAppTitle = pageAppTitle or 'DAVIS' %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <meta name="applicable-device" content="pc,mobile">
+  <title>{{ pageTitle }}</title>
+  <meta name="keywords" content="{{ pageKeywords }}">
+  <meta name="description" content="{{ pageDescription }}">
+  <link rel="canonical" href="{{ pageUrl | url }}">
+  <link rel="alternate" hreflang="en" href="{{ pageUrl | url }}">
+  <meta property="og:url" content="{{ pageUrl | url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:image" content="{{ pageOgImage }}">
+  <meta property="og:image:secure_url" content="{{ pageOgImage }}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ pageOgImageAlt }}">
+  <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
+  <link rel="icon" href="{{ '/static/assets/favicon.png' | url }}">
   <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ '/static/assets/davis-icon.jpg' | url }}">
+  <meta name="apple-mobile-web-app-title" content="HAZO World">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ '/static/css/global.css' | url }}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "image": "{{ '/static/about/about.jpg' | url }}",
+      "name": "DAVIS",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shashui industrial zone, Songgang, Shishan Town, Nanhai District",
+        "addressLocality": "Foshan",
+        "addressRegion": "GD",
+        "postalCode": "528234",
+        "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 23.1679444,
+        "longitude": 113.1262222
+      },
+      "url": "https://davisawning.com",
+      "email": "melissa@davisawning.com",
+      "telephone": "+86-135-2891-5770",
+      "priceRange": "$$$"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://davisawning.com",
+      "logo": "{{ '/static/assets/davis-logo.png' | url }}",
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+86-135-2891-5770",
+        "contactType": "sales"
+      }]
+    }
+  </script>
+  {% if breadcrumbTitle %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://davisawning.com"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ breadcrumbTitle }}",
+        "item": "https://davisawning.com{{ pageUrl }}"
+      }]
+    }
+  </script>
+  {% endif %}
   {% block head %}{% endblock %}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500,
+      region: [
+        'CA', 'US-CA', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB'
+      ],
+    });
+    gtag('set', 'url_passthrough', true);
+    gtag('set', 'ads_data_redaction', true);
+  </script>
+  <script>
+    if (localStorage['gtag.consent.option'] !== undefined) {
+      const option = JSON.parse(localStorage['gtag.consent.option']);
+      gtag('consent', 'update', option);
+    }
+  </script>
+  <script>
+    window.addEventListener('load',function() {
+      document.addEventListener('click', function (e) {
+      const btnAcceptCookie = e.target.closest('#cookie-bar > div > button.btn.btn-primary.btn-radius.margin-right-15');
+        if (btnAcceptCookie === null) return;
+        const option = {
+          'analytics_storage': 'granted',
+          'ad_storage': 'granted',
+          'ad_user_data': 'granted',
+          'ad_personalization': 'granted'
+        };
+        gtag('consent', 'update', option);
+        localStorage['gtag.consent.option'] = JSON.stringify(option);
+      });
+    });
+  </script>
+  <script>
+    window.addEventListener('load',function() {
+      document.addEventListener('click', function (e) {
+      const btnRejectCookie = e.target.closest('#cookie-bar > div > button.btn.btn-transparent.btn-radius');
+        if (btnRejectCookie === null) return;
+        const option = {
+          'analytics_storage': 'denied',
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
+        };
+        gtag('consent', 'update', option);
+        localStorage.removeItem('gtag.consent.option');
+      });
+    });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G64KLDXVRF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-G64KLDXVRF');
+  </script>
+  <script>
+    window.addEventListener('load', function (event) {
+      document.querySelectorAll('[href*="mailto:"]').forEach(function (e) {
+        e.addEventListener('click', function () {
+          gtag('event', 'email_feedback', { 'send_to': 'G-G64KLDXVRF' });
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   {% include "header.njk" %}
