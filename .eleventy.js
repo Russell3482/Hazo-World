@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
       input: ".",
       includes: "_includes",
       layouts: "_layouts",
-      output: "_site",
+      output: "build",
     },
     htmlTemplateEngine: "njk",
   };
