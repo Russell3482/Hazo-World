@@ -1,33 +1,30 @@
-<!doctype html>
-<html lang="en">
-  
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+{% extends "base.njk" %}
+{% set activeNav = "home" %}
+{% set showLanguageLink = false %}
+{% set plainFeedbackLink = false %}
+
+{% block head %}
+    <link rel="canonical" href="/">
+    <link rel="alternate" hreflang="en" href="/">
+    <meta property="og:url" content="/">
     <title>DAVIS: Motorized Awning Factory Since 1992</title>
     <meta name="keywords" content="DAVIS">
     <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <link rel="canonical" href="index.html">
-    <link rel="icon" href="./static/assets/favicon.png">
+    <link rel="icon" href="/static/assets/favicon.png">
     <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">
-    <meta name="applicable-device" content="pc,mobile">
-    <link rel="alternate" hreflang="en" href="index.html">
-    <meta property="og:url" content="index.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="DAVIS: Motorized Awning Factory Since 1992">
     <meta property="og:description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <meta property="og:image" content="./static/assets/leader.jpg">
-    <meta property="og:image:secure_url" content="./static/assets/leader.jpg">
+    <meta property="og:image" content="/static/assets/leader.jpg">
+    <meta property="og:image:secure_url" content="/static/assets/leader.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="DAVIS">
     <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
-    <link rel="apple-touch-icon" href="./static/assets/davis-icon.jpg">
+    <link rel="apple-touch-icon" href="/static/assets/davis-icon.jpg">
     <meta name="apple-mobile-web-app-title" content="DAVIS">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./static/css/global.css">
-    <link type="text/css" rel="stylesheet" href="assets/carouselnew.css">
+    <link type="text/css" rel="stylesheet" href="/assets/carouselnew.css">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -47,11 +44,11 @@
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "name": "./static/assets/leader.jpg"
+          "name": "/static/assets/leader.jpg"
         },
         "image": {
           "@type": "ImageObject",
-          "url": "./static/assets/leader.jpg",
+          "url": "/static/assets/leader.jpg",
           "width": 1200,
           "height": 630
         },
@@ -60,7 +57,7 @@
           "name": "DAVIS",
           "logo": {
             "@type": "ImageObject",
-            "url": "./static/assets/logo.jpg",
+            "url": "/static/assets/logo.jpg",
             "width": 181,
             "height": 60
           }
@@ -71,7 +68,7 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "image": "./static/about/about.jpg",
+        "image": "/static/about/about.jpg",
         "name": "DAVIS",
         "address": {
           "@type": "PostalAddress",
@@ -97,7 +94,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://davisawning.com",
-        "logo": "./static/assets/davis-logo.png",
+        "logo": "/static/assets/davis-logo.png",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+86-135-2891-5770",
@@ -188,68 +185,46 @@
         });
       });
     </script>
-  </head>
-  <body>
-    <header id="luxbar" class="luxbar-fixed">
-      <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox">
-      <div class="luxbar-menu luxbar-menu-right luxbar-menu-white">
-        <div class="container">
-          <ul class="luxbar-navigation">
-            <li class="luxbar-header">
-              <a href="index.html">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/hazo_logo.webp" height="35" alt="HAZO Logo">
-                  <img src="./static/assets/hazo_logo.png" height="35" alt="HAZO Logo">
-                </picture>
-              </a>
-              <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
-            </li>
-            <li class="luxbar-item active"><a href="index.html">Home</a></li>
-            <li class="luxbar-item "><a href="#" data-bs-toggle="modal" data-bs-target="#allproducts">Products</a></li>
-            <li class="luxbar-item "><a href="catalog/index.html">Catalog</a></li>
-            <li class="luxbar-item "><a href="about/index.html">About</a></li>
-            <li class="luxbar-item "><a href="contact/index.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <div class="margin-top-58"></div>
+{% endblock %}
+
+{% block content %}
+<div class="margin-top-58"></div>
     <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade hidden-sm hidden-xs" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-251017.webp" width="1920" height="700" alt="HAZO" class="img-responsive">
-          <img src="./static/home/billboard-251017.jpg" width="1920" height="700" alt="DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-251017.webp" width="1920" height="700" alt="HAZO" class="img-responsive">
+          <img src="/static/home/billboard-251017.jpg" width="1920" height="700" alt="DAVIS" class="img-responsive">
         </picture>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
-      <a href="retractable-roof/index.html">
+      <a href="/retractable-roof/">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-retractable-roof.webp" width="1920" height="700" alt="Retractable Roof" class="img-responsive">
-          <img src="./static/home/billboard-retractable-roof.jpg" width="1920" height="700" alt="Retractable Roof" class="img-responsive">
-        </picture>
-      </a>
-    </div>
-    <div class="carousel-item " data-bs-interval="3000">
-      <a href="aluminum-bioclimate-pergola/index.html">
-        <picture>
-          <source type="image/webp" srcset="./static/home/billboard-aluminum-bioclimate-pergola.webp" width="1920" height="700" alt="Aluminum Bioclimate Pergola" class="img-responsive">
-          <img src="./static/home/billboard-aluminum-bioclimate-pergola.jpg" width="1920" height="700" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-retractable-roof.webp" width="1920" height="700" alt="Retractable Roof" class="img-responsive">
+          <img src="/static/home/billboard-retractable-roof.jpg" width="1920" height="700" alt="Retractable Roof" class="img-responsive">
         </picture>
       </a>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
-      <a href="about/index.html">
+      <a href="/aluminum-bioclimate-pergola/">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-about.webp" width="1920" height="700" alt="About DAVIS" class="img-responsive">
-          <img src="./static/home/billboard-about.jpg" width="1920" height="700" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-aluminum-bioclimate-pergola.webp" width="1920" height="700" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+          <img src="/static/home/billboard-aluminum-bioclimate-pergola.jpg" width="1920" height="700" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+        </picture>
+      </a>
+    </div>
+    <div class="carousel-item " data-bs-interval="3000">
+      <a href="/about/">
+        <picture>
+          <source type="image/webp" srcset="/static/home/billboard-about.webp" width="1920" height="700" alt="About DAVIS" class="img-responsive">
+          <img src="/static/home/billboard-about.jpg" width="1920" height="700" alt="About DAVIS" class="img-responsive">
         </picture>
       </a>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-partners.webp" width="1920" height="700" alt="Partners" class="img-responsive">
-          <img src="./static/home/billboard-partners.jpg" width="1920" height="700" alt="Partners" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-partners.webp" width="1920" height="700" alt="Partners" class="img-responsive">
+          <img src="/static/home/billboard-partners.jpg" width="1920" height="700" alt="Partners" class="img-responsive">
         </picture>
     </div>
   </div>
@@ -264,38 +239,38 @@
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-251017-small.webp" width="1000" height="1000" alt="DAVIS" class="img-responsive">
-          <img src="./static/home/billboard-251017-small.jpg" width="1000" height="1000" alt="DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-251017-small.webp" width="1000" height="1000" alt="DAVIS" class="img-responsive">
+          <img src="/static/home/billboard-251017-small.jpg" width="1000" height="1000" alt="DAVIS" class="img-responsive">
         </picture>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
-      <a href="retractable-roof/index.html">
+      <a href="/retractable-roof/">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-retractable-roof-small.webp" width="1000" height="1000" alt="Retractable Roof" class="img-responsive">
-          <img src="./static/home/billboard-retractable-roof-small.jpg" width="1000" height="1000" alt="Retractable Roof" class="img-responsive">
-        </picture>
-      </a>
-    </div>
-    <div class="carousel-item " data-bs-interval="3000">
-      <a href="aluminum-bioclimate-pergola/index.html">
-        <picture>
-          <source type="image/webp" srcset="./static/home/billboard-aluminum-bioclimate-pergola-small.webp" width="1000" height="1000" alt="Aluminum Bioclimate Pergola" class="img-responsive">
-          <img src="./static/home/billboard-aluminum-bioclimate-pergola-small.jpg" width="1000" height="1000" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-retractable-roof-small.webp" width="1000" height="1000" alt="Retractable Roof" class="img-responsive">
+          <img src="/static/home/billboard-retractable-roof-small.jpg" width="1000" height="1000" alt="Retractable Roof" class="img-responsive">
         </picture>
       </a>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
-      <a href="about/index.html">
+      <a href="/aluminum-bioclimate-pergola/">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-about-small.webp" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
-          <img src="./static/home/billboard-about-small.jpg" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-aluminum-bioclimate-pergola-small.webp" width="1000" height="1000" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+          <img src="/static/home/billboard-aluminum-bioclimate-pergola-small.jpg" width="1000" height="1000" alt="Aluminum Bioclimate Pergola" class="img-responsive">
+        </picture>
+      </a>
+    </div>
+    <div class="carousel-item " data-bs-interval="3000">
+      <a href="/about/">
+        <picture>
+          <source type="image/webp" srcset="/static/home/billboard-about-small.webp" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
+          <img src="/static/home/billboard-about-small.jpg" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
         </picture>
       </a>
     </div>
     <div class="carousel-item " data-bs-interval="3000">
         <picture>
-          <source type="image/webp" srcset="./static/home/billboard-partners-small.webp" width="1000" height="1000" alt="Partners" class="img-responsive">
-          <img src="./static/home/billboard-partners-small.jpg" width="1000" height="1000" alt="Partners" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/billboard-partners-small.webp" width="1000" height="1000" alt="Partners" class="img-responsive">
+          <img src="/static/home/billboard-partners-small.jpg" width="1000" height="1000" alt="Partners" class="img-responsive">
         </picture>
     </div>
   </div>
@@ -312,98 +287,98 @@
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="full-cassette-awning/index.html">
+          <a href="/full-cassette-awning/">
             <picture>
-              <source type="image/webp" srcset="./static/home/full-cassette-awning.webp" alt="Full Cassette Awning" width="800" height="400" class="img-responsive">
-              <img src="./static/home/full-cassette-awning.png" alt="Full Cassette Awning" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/full-cassette-awning.webp" alt="Full Cassette Awning" width="800" height="400" class="img-responsive">
+              <img src="/static/home/full-cassette-awning.png" alt="Full Cassette Awning" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="full-cassette-awning/index.html" class="hover-color-black">Full Cassette Awning</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/full-cassette-awning/" class="hover-color-black">Full Cassette Awning</a></p>
         <p class="text-justify margin-btm-40">Modern electric retractable awning with built-in LED lighting</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="retractable-roof/index.html">
+          <a href="/retractable-roof/">
             <picture>
-              <source type="image/webp" srcset="./static/home/retractable-roof.webp" alt="Retractable Roof" width="800" height="400" class="img-responsive">
-              <img src="./static/home/retractable-roof.png" alt="Retractable Roof" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/retractable-roof.webp" alt="Retractable Roof" width="800" height="400" class="img-responsive">
+              <img src="/static/home/retractable-roof.png" alt="Retractable Roof" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="retractable-roof/index.html" class="hover-color-black">Retractable Roof</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/retractable-roof/" class="hover-color-black">Retractable Roof</a></p>
         <p class="text-justify margin-btm-40">Aluminum alloy frame, PVC fabric, large coverage and shade</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="bioclimate-pergola/index.html">
+          <a href="/bioclimate-pergola/">
             <picture>
-              <source type="image/webp" srcset="./static/home/bioclimate-pergola.webp" alt="Bioclimate Pergola" width="800" height="400" class="img-responsive">
-              <img src="./static/home/bioclimate-pergola.png" alt="Bioclimate Pergola" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/bioclimate-pergola.webp" alt="Bioclimate Pergola" width="800" height="400" class="img-responsive">
+              <img src="/static/home/bioclimate-pergola.png" alt="Bioclimate Pergola" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="bioclimate-pergola/index.html" class="hover-color-black">Bioclimate Pergola</a></p>
-        <p class="text-justify margin-btm-40">Smart aluminum pergola – motorized louvers, remote control</p>
+        <p class="font-size-20 font-weight-700"><a href="/bioclimate-pergola/" class="hover-color-black">Bioclimate Pergola</a></p>
+        <p class="text-justify margin-btm-40">Smart aluminum pergola <motorized louvers, remote control</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="zip-screen/index.html">
+          <a href="/zip-screen/">
             <picture>
-              <source type="image/webp" srcset="./static/home/zip-screen.webp" alt="Zip Screen" width="800" height="400" class="img-responsive">
-              <img src="./static/home/zip-screen.png" alt="Zip Screen" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/zip-screen.webp" alt="Zip Screen" width="800" height="400" class="img-responsive">
+              <img src="/static/home/zip-screen.png" alt="Zip Screen" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="zip-screen/index.html" class="hover-color-black">Zip Screen</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/zip-screen/" class="hover-color-black">Zip Screen</a></p>
         <p class="text-justify margin-btm-40">Suitable for indoor sunshade, mosquito repellent and ventilation</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="window-awning/index.html">
+          <a href="/window-awning/">
             <picture>
-              <source type="image/webp" srcset="./static/home/window-awning.webp" alt="Window Awning" width="800" height="400" class="img-responsive">
-              <img src="./static/home/window-awning.png" alt="Window Awning" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/window-awning.webp" alt="Window Awning" width="800" height="400" class="img-responsive">
+              <img src="/static/home/window-awning.png" alt="Window Awning" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="window-awning/index.html" class="hover-color-black">Window Awning</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/window-awning/" class="hover-color-black">Window Awning</a></p>
         <p class="text-justify margin-btm-40">Provides shading and heat insulation, beautifies buildings</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="original-awning/index.html">
+          <a href="/original-awning/">
             <picture>
-              <source type="image/webp" srcset="./static/home/original-awning.webp" alt="Original Awning" width="800" height="400" class="img-responsive">
-              <img src="./static/home/original-awning.png" alt="Original Awning" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/original-awning.webp" alt="Original Awning" width="800" height="400" class="img-responsive">
+              <img src="/static/home/original-awning.png" alt="Original Awning" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="original-awning/index.html" class="hover-color-black">Original Awning</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/original-awning/" class="hover-color-black">Original Awning</a></p>
         <p class="text-justify margin-btm-40">Outdoor sunshade, heat insulation, electric retractable system</p>
       </div>
     </div>
     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-20">
       <div class="bg-grey-products margin-btm-30">
         <div class="img-width-800 image-margin-center margin-btm-20">
-          <a href="external-roof-blinds/index.html">
+          <a href="/external-roof-blinds/">
             <picture>
-              <source type="image/webp" srcset="./static/home/external-roof-blinds.webp" alt="External Roof Blinds" width="800" height="400" class="img-responsive">
-              <img src="./static/home/external-roof-blinds.png" alt="External Roof Blinds" width="800" height="400" class="img-responsive">
+              <source type="image/webp" srcset="/static/home/external-roof-blinds.webp" alt="External Roof Blinds" width="800" height="400" class="img-responsive">
+              <img src="/static/home/external-roof-blinds.png" alt="External Roof Blinds" width="800" height="400" class="img-responsive">
             </picture>
           </a>
         </div>
-        <p class="font-size-20 font-weight-700"><a href="external-roof-blinds/index.html" class="hover-color-black">External Roof Blinds</a></p>
+        <p class="font-size-20 font-weight-700"><a href="/external-roof-blinds/" class="hover-color-black">External Roof Blinds</a></p>
         <p class="text-justify margin-btm-40">Equipped with roof glass sunshade, heat insulation function</p>
       </div>
     </div>
@@ -416,8 +391,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-manufacturing-base.webp" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-manufacturing-base.jpg" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-manufacturing-base.webp" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-manufacturing-base.jpg" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Manufacturing Base</p>
@@ -425,8 +400,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-showroom.webp" alt="Showroom" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-showroom.jpg" alt="Showroom" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-showroom.webp" alt="Showroom" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-showroom.jpg" alt="Showroom" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Showroom</p>
@@ -434,8 +409,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-completed-projects.webp" alt="Completed Projects" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-completed-projects.jpg" alt="Completed Projects" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-completed-projects.webp" alt="Completed Projects" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-completed-projects.jpg" alt="Completed Projects" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Completed Projects</p>
@@ -443,8 +418,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-export-to-70-countries.webp" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-export-to-70-countries.jpg" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-export-to-70-countries.webp" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-export-to-70-countries.jpg" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Export To 70+ Countries</p>
@@ -452,8 +427,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-30-rd-team-members.webp" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-30-rd-team-members.jpg" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-30-rd-team-members.webp" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-30-rd-team-members.jpg" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">30+ R&D Team Members</p>
@@ -461,8 +436,8 @@
       <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
         <div class="img-width-400 image-margin-center margin-btm-20">
           <picture>
-            <source type="image/webp" srcset="./static/about/icon-200-national-patents.webp" alt="200+ National Patents" width="400" height="150" class="img-responsive">
-            <img src="./static/about/icon-200-national-patents.jpg" alt="200+ National Patents" width="400" height="150" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/icon-200-national-patents.webp" alt="200+ National Patents" width="400" height="150" class="img-responsive">
+            <img src="/static/about/icon-200-national-patents.jpg" alt="200+ National Patents" width="400" height="150" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">200+ National Patents</p>
@@ -474,13 +449,13 @@
         <p class="text-justify">Founded in 1992, DAVIS Outdoor Products Co., Ltd. is a 33-year manufacturer specializing in the R&D and production of outdoor shading systems. Its product range includes Retractable Awnings, Retractable Roofs, Aluminum Alloy Pergolas, Liftable Screens, Window Awnings, and Roof Roller Blinds.</p>
         <p class="text-justify">Operating from a 30,000 sqm factory, the company employs over 450 personnel, including 30 in R&D, 20 in sales, 300 in production, and 100 in installation/maintenance.</p>
         <p class="text-justify">DAVIS holds certifications including CE, ISO9001, IONET, SGS, GB-T, UL, and CUL, along with 200 patents. Its products are exported to over 120 countries, primarily in Europe and America, providing OEM and technical services for nearly 300 global brands.</p>
-        <p class="margin-top-30"><a href="about/index.html" class="btn btn-primary btn-radius">About DAVIS</a></p>
+        <p class="margin-top-30"><a href="/about/" class="btn btn-primary btn-radius">About DAVIS</a></p>
       </div>
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 margin-btm-40">
         <div class="img-width-800 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/about/about.webp" width="800" height="450" alt="About DAVIS" class="img-responsive">
-            <img src="./static/about/about.jpg" width="800" height="450" alt="About DAVIS" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/about.webp" width="800" height="450" alt="About DAVIS" class="img-responsive">
+            <img src="/static/about/about.jpg" width="800" height="450" alt="About DAVIS" class="img-responsive">
           </picture>
         </div>
       </div>
@@ -489,8 +464,8 @@
       <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
         <div class="img-width-600 image-margin-center margin-btm-10">
           <picture>
-            <source type="image/webp" srcset="./static/about/factory-interior-environment-1.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
-            <img src="./static/about/factory-interior-environment-1.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/factory-interior-environment-1.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+            <img src="/static/about/factory-interior-environment-1.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Factory Interior Environment</p>
@@ -498,8 +473,8 @@
       <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
         <div class="img-width-600 image-margin-center margin-btm-10">
           <picture>
-            <source type="image/webp" srcset="./static/about/factory-interior-environment-2.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
-            <img src="./static/about/factory-interior-environment-2.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/factory-interior-environment-2.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+            <img src="/static/about/factory-interior-environment-2.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Factory Interior Environment</p>
@@ -507,8 +482,8 @@
       <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
         <div class="img-width-600 image-margin-center margin-btm-10">
           <picture>
-            <source type="image/webp" srcset="./static/about/indoor-showroom-environment.webp" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
-            <img src="./static/about/indoor-showroom-environment.jpg" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/indoor-showroom-environment.webp" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
+            <img src="/static/about/indoor-showroom-environment.jpg" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Indoor Showroom Environment</p>
@@ -516,8 +491,8 @@
       <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
         <div class="img-width-600 image-margin-center margin-btm-10">
           <picture>
-            <source type="image/webp" srcset="./static/about/rooftop-showroom-environment.webp" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
-            <img src="./static/about/rooftop-showroom-environment.jpg" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
+            <source type="image/webp" srcset="/static/about/rooftop-showroom-environment.webp" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
+            <img src="/static/about/rooftop-showroom-environment.jpg" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
           </picture>
         </div>
         <p class="text-center">Rooftop Showroom Environment</p>
@@ -531,8 +506,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/expert-in-customized-design-solutions.webp" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/expert-in-customized-design-solutions.jpg" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/expert-in-customized-design-solutions.webp" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/expert-in-customized-design-solutions.jpg" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Expert in Customized Design Solutions</p>
@@ -540,8 +515,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/quick-3d-printed-sample-prototyping.webp" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/quick-3d-printed-sample-prototyping.jpg" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/quick-3d-printed-sample-prototyping.webp" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/quick-3d-printed-sample-prototyping.jpg" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Quick 3D Printed Sample Prototyping</p>
@@ -549,8 +524,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/site-based-design-technical-drawings.webp" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/site-based-design-technical-drawings.jpg" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/site-based-design-technical-drawings.webp" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/site-based-design-technical-drawings.jpg" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Site-Based Design & Technical Drawings</p>
@@ -558,8 +533,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/hands-on-training-at-our-factory.webp" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/hands-on-training-at-our-factory.jpg" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/hands-on-training-at-our-factory.webp" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/hands-on-training-at-our-factory.jpg" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Hands-On Training at Our Factory</p>
@@ -567,8 +542,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/on-site-training-for-dealers.webp" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/on-site-training-for-dealers.jpg" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/on-site-training-for-dealers.webp" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/on-site-training-for-dealers.jpg" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">On-Site Training for Dealers</p>
@@ -576,8 +551,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/professional-site-supervision-guidance.webp" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/professional-site-supervision-guidance.jpg" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/professional-site-supervision-guidance.webp" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/professional-site-supervision-guidance.jpg" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Professional Site Supervision & Guidance</p>
@@ -585,8 +560,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/international-installation-support.webp" alt="International Installation Support" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/international-installation-support.jpg" alt="International Installation Support" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/international-installation-support.webp" alt="International Installation Support" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/international-installation-support.jpg" alt="International Installation Support" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">International Installation Support</p>
@@ -594,8 +569,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/20-years-of-global-project-experience.webp" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/20-years-of-global-project-experience.jpg" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/20-years-of-global-project-experience.webp" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/20-years-of-global-project-experience.jpg" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">20+ Years of Global Project Experience</p>
@@ -603,8 +578,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="./static/why-choose-us/reliable-after-sales-support-warranty.webp" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
-        <img src="./static/why-choose-us/reliable-after-sales-support-warranty.jpg" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="/static/why-choose-us/reliable-after-sales-support-warranty.webp" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
+        <img src="/static/why-choose-us/reliable-after-sales-support-warranty.jpg" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Reliable After-Sales Support & Warranty</p>
@@ -618,48 +593,48 @@
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/sauleda.webp" alt="Sauleda" width="300" height="100" class="img-responsive">
-            <img src="./static/home/sauleda.jpg" alt="Sauleda" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/sauleda.webp" alt="Sauleda" width="300" height="100" class="img-responsive">
+            <img src="/static/home/sauleda.jpg" alt="Sauleda" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/dooya.webp" alt="DOOYA" width="300" height="100" class="img-responsive">
-            <img src="./static/home/dooya.jpg" alt="DOOYA" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/dooya.webp" alt="DOOYA" width="300" height="100" class="img-responsive">
+            <img src="/static/home/dooya.jpg" alt="DOOYA" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/somfy.webp" alt="Somfy" width="300" height="100" class="img-responsive">
-            <img src="./static/home/somfy.jpg" alt="Somfy" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/somfy.webp" alt="Somfy" width="300" height="100" class="img-responsive">
+            <img src="/static/home/somfy.jpg" alt="Somfy" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/serge-ferrari.webp" alt="Serge Ferrari" width="300" height="100" class="img-responsive">
-            <img src="./static/home/serge-ferrari.jpg" alt="Serge Ferrari" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/serge-ferrari.webp" alt="Serge Ferrari" width="300" height="100" class="img-responsive">
+            <img src="/static/home/serge-ferrari.jpg" alt="Serge Ferrari" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/wistar.webp" alt="WISTAR" width="300" height="100" class="img-responsive">
-            <img src="./static/home/wistar.jpg" alt="WISTAR" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/wistar.webp" alt="WISTAR" width="300" height="100" class="img-responsive">
+            <img src="/static/home/wistar.jpg" alt="WISTAR" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
       <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
         <div class="img-width-300 image-margin-center">
           <picture>
-            <source type="image/webp" srcset="./static/home/a-ok.webp" alt="A-OK" width="300" height="100" class="img-responsive">
-            <img src="./static/home/a-ok.jpg" alt="A-OK" width="300" height="100" class="img-responsive">
+            <source type="image/webp" srcset="/static/home/a-ok.webp" alt="A-OK" width="300" height="100" class="img-responsive">
+            <img src="/static/home/a-ok.jpg" alt="A-OK" width="300" height="100" class="img-responsive">
           </picture>
         </div>
       </div>
@@ -672,64 +647,64 @@
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-1.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-1.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-1.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-1.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-2.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-2.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-2.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-2.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-3.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-3.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-3.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-3.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-4.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-4.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-4.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-4.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-5.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-5.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-5.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-5.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-6.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-6.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-6.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-6.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-7.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-7.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-7.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-7.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="./static/home/international-fairs-8.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
-          <img src="./static/home/international-fairs-8.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="/static/home/international-fairs-8.webp" alt="International Fairs" width="600" height="400" class="img-responsive">
+          <img src="/static/home/international-fairs-8.jpg" alt="International Fairs" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
@@ -739,458 +714,20 @@
     <div class="img-pr">
       <div class="hidden-md hidden-xs hidden-sm">
         <picture>
-          <source type="image/webp" srcset="./static/assets/faq-support.webp" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
-          <img src="./static/assets/faq-support.jpg" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <source type="image/webp" srcset="/static/assets/faq-support.webp" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <img src="/static/assets/faq-support.jpg" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
         </picture>
       </div>
       <div class="hidden-lg hidden-xl hidden-xxl">
         <picture>
-          <source type="image/webp" srcset="./static/assets/faq-support-small.webp" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
-          <img src="./static/assets/faq-support-small.jpg" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <source type="image/webp" srcset="/static/assets/faq-support-small.webp" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <img src="/static/assets/faq-support-small.jpg" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
         </picture>
       </div>
       <div class="img-text text-center width-bf95">
         <p class="font-comfortaa font-size-28 font-weight-700 margin-btm-20">FAQ & Support</p>
         <p class="margin-btm-40">Do you have any questions? We will be more than happy to solve your doubts, whether you are an individual or a professional.</p>
-        <a href="contact/index.html" class="btn btn-primary btn-radius">Contact Us</a>
+        <a href="/contact/" class="btn btn-primary btn-radius">Contact Us</a>
       </div>
     </div>
-    <div class="container">
-      <div class="row margin-top-50 padding-btm-20">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-30 hidden-xs">
-          <div class="img-width-200 margin-btm-20">
-            <picture>
-              <source type="image/webp" srcset="./static/assets/hazo_logo.webp" height="35" alt="HAZO Logo">
-              <img src="./static/assets/hazo_logo.png" height="35" alt="HAZO Logo">
-            </picture>
-          </div>
-          <p class="text-primary font-size-18 font-weight-700">Foshan Davis Outdoor Products Co., Ltd.</p>
-          <p>Our Mission To Customers:</p>
-          <p>To obtain your trust with professional</p>
-          <p>Services & quality productions</p>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-30 hidden-xs">
-          <p class="text-black font-size-20 font-weight-700">Products</p>
-          <div class="row">
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <p><a href="retractable-roof/index.html" class="hover-color">Retractable Roof</a></p>
-              <p><a href="full-cassette-awning/index.html" class="hover-color">Full Cassette Awning</a></p>
-              <p><a href="bioclimate-pergola/index.html" class="hover-color">Bioclimate Pergola</a></p>
-              <p><a href="zip-screen/index.html" class="hover-color">Zip Screen</a></p>
-              <p><a href="window-awning/index.html" class="hover-color">Window Awning</a></p>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <p><a href="original-awning/index.html" class="hover-color">Original Awning</a></p>
-              <p><a href="external-roof-blinds/index.html" class="hover-color">External Roof Blinds</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 margin-btm-30">
-          <p class="text-black font-size-20 font-weight-700">Contact Us</p>
-          <p>If you have any questions, please contact us !</p>
-          <p><span class="text-black">E-mail:</span> <a href="mailto:melissa@davisawning.com" target="_blank">melissa@davisawning.com</a></p>
-          <p><span class="text-black">Phone:</span> 0086 135 2891 5770</p>
-          <p><span class="text-black">Address:</span> Shashui industrial zone, Songgang, Shishan Town, Nanhai District, Foshan City, Guangdong Province, China, 528234</p>
-          <div class="row margin-top-30 img-width-600">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.facebook.com/DavisAwning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/facebook.webp" alt="Facebook" width="39" height="39">
-                  <img src="./static/assets/facebook.png" alt="Facebook" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://twitter.com/davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/twitter.webp" alt="Twitter" width="39" height="39">
-                  <img src="./static/assets/twitter.png" alt="Twitter" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.linkedin.com/company/davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/linkedin.webp" alt="Linkedin" width="39" height="39">
-                  <img src="./static/assets/linkedin.png" alt="Linkedin" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.instagram.com/davisawnings" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/instagram.webp" alt="Instagram" width="39" height="39">
-                  <img src="./static/assets/instagram.png" alt="Instagram" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.pinterest.com/davisawning/" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/pinterest.webp" alt="Pinterest" width="39" height="39">
-                  <img src="./static/assets/pinterest.png" alt="Pinterest" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.youtube.com/@davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="./static/assets/youtube.webp" alt="Youtube" width="39" height="39">
-                  <img src="./static/assets/youtube.png" alt="Youtube" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-grey text-center padding-top-20 padding-btm-20">Copyright © 1992-2025 Foshan Davis Outdoor Products Co., Ltd. | <a href="sitemap.xml" class="hover-color" target="_blank">Sitemap</a> </div>
-    <div class="feedback">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#get-a-free-quote" title="Get a Free Quote">
-        <picture>
-          <source type="image/webp" srcset="./static/assets/contact-support.webp" width="35" height="33" alt="Get a Free Quote">
-          <img src="./static/assets/contact-support.png" width="35" height="33" alt="Get a Free Quote">
-        </picture>
-      </a>
-    </div>
-    <div class="back-to-top">
-      <a href="#">
-        <picture>
-          <source type="image/webp" srcset="./static/assets/back-to-top.webp" width="35" height="33" alt="Back To Top">
-          <img src="./static/assets/back-to-top.png" width="35" height="33" alt="Back To Top">
-        </picture>
-      </a>
-    </div>
-    <div class="cookie-bar" id="cookie-bar">
-      <div class="container padding-top-30 padding-btm-30">
-        <p class="font-size-20 text-black font-weight-500">We use cookies</p>
-        <p>We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.</p>
-        <button class="btn btn-primary btn-radius margin-right-15" onclick="closebar_cookie()">Accept</button>
-        <button class="btn btn-transparent btn-radius" onclick="closebar_cookie()">Refuse</button>
-      </div>
-    </div>
-    <div class="modal fade" id="allproducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="font-nunito-sans modal-title font-size-20 text-black font-weight-700" id="exampleModalLabel">Products</p>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row margin-top-10">
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="full-cassette-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/full-cassette-awning.webp" width="800" height="700" class="img-responsive" alt="Full Cassette Awning">
-                      <img src="./static/products/full-cassette-awning.jpg" width="800" height="700" class="img-responsive" alt="Full Cassette Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="full-cassette-awning/index.html" class="hover-color">Full Cassette Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="retractable-roof/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/retractable-roof.webp" width="800" height="700" class="img-responsive" alt="Retractable Roof">
-                      <img src="./static/products/retractable-roof.jpg" width="800" height="700" class="img-responsive" alt="Retractable Roof">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="retractable-roof/index.html" class="hover-color">Retractable Roof</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="bioclimate-pergola/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/bioclimate-pergola.webp" width="800" height="700" class="img-responsive" alt="Bioclimate Pergola">
-                      <img src="./static/products/bioclimate-pergola.jpg" width="800" height="700" class="img-responsive" alt="Bioclimate Pergola">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="bioclimate-pergola/index.html" class="hover-color">Bioclimate Pergola</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="zip-screen/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/zip-screen.webp" width="800" height="700" class="img-responsive" alt="Zip Screen">
-                      <img src="./static/products/zip-screen.jpg" width="800" height="700" class="img-responsive" alt="Zip Screen">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="zip-screen/index.html" class="hover-color">Zip Screen</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="window-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/window-awning.webp" width="800" height="700" class="img-responsive" alt="Window Awning">
-                      <img src="./static/products/window-awning.jpg" width="800" height="700" class="img-responsive" alt="Window Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="window-awning/index.html" class="hover-color">Window Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="original-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/original-awning.webp" width="800" height="700" class="img-responsive" alt="Original Awning">
-                      <img src="./static/products/original-awning.jpg" width="800" height="700" class="img-responsive" alt="Original Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="original-awning/index.html" class="hover-color">Original Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="external-roof-blinds/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="./static/products/external-roof-blinds.webp" width="800" height="700" class="img-responsive" alt="External Roof Blinds">
-                      <img src="./static/products/external-roof-blinds.jpg" width="800" height="700" class="img-responsive" alt="External Roof Blinds">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="external-roof-blinds/index.html" class="hover-color">External Roof Blinds</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="get-a-free-quote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="font-nunito-sans modal-title font-size-20 text-black font-weight-700" id="exampleModalLabel">How Can We Help You</p>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            
-<form action="https://formcarry.com/s/DueROKlgWfS" method="POST" class="margin-top-20 margin-btm-40">
-  <input class="form-control-new" type="text" name="url" value="https://davisawning.com/" readonly>
-  <input class="form-control-new" type="text" name="title" value="" readonly>
-  <input class="form-control-new" type="text" name="name">
-  <input class="form-control-new" type="email" name="email">
-  <div class="row">
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <input class="form-control margin-btm-20" type="text" name="xingming" placeholder="* Name" required>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <input class="form-control margin-btm-20" type="email" name="youxiang" placeholder="* Email" required>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <input class="form-control margin-btm-20" type="tel" name="phone" placeholder="* Phone" required>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <select class="form-control margin-btm-20" name="country" required>
-        <option value="" data-display="* Country">* Country</option>
-        <option value="Afghanistan">Afghanistan</option>
-        <option value="Albania">Albania</option>
-        <option value="Algeria">Algeria</option>
-        <option value="Angola">Angola</option>
-        <option value="Anguilla">Anguilla</option>
-        <option value="Antigua And Barbuda">Antigua And Barbuda</option>
-        <option value="Argentina">Argentina</option>
-        <option value="Armenia">Armenia</option>
-        <option value="Australia">Australia</option>
-        <option value="Austria">Austria</option>
-        <option value="Azerbaijan">Azerbaijan</option>
-        <option value="Bahamas">Bahamas</option>
-        <option value="Bahrain">Bahrain</option>
-        <option value="Barbados">Barbados</option>
-        <option value="Belarus">Belarus</option>
-        <option value="Belgium">Belgium</option>
-        <option value="Belize">Belize</option>
-        <option value="Benin">Benin</option>
-        <option value="Bermuda">Bermuda</option>
-        <option value="Bhutan">Bhutan</option>
-        <option value="Bolivia">Bolivia</option>
-        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
-        <option value="Botswana">Botswana</option>
-        <option value="Brazil">Brazil</option>
-        <option value="British Virgin Islands">British Virgin Islands</option>
-        <option value="Brunei Darussalam">Brunei Darussalam</option>
-        <option value="Bulgaria">Bulgaria</option>
-        <option value="Burkina Faso">Burkina Faso</option>
-        <option value="Cambodia">Cambodia</option>
-        <option value="Cameroon">Cameroon</option>
-        <option value="Canada">Canada</option>
-        <option value="Cape Verde">Cape Verde</option>
-        <option value="Cayman Islands">Cayman Islands</option>
-        <option value="Chad">Chad</option>
-        <option value="Chile">Chile</option>
-        <option value="China mainland">China mainland</option>
-        <option value="Colombia">Colombia</option>
-        <option value="Costa Rica">Costa Rica</option>
-        <option value="Côte d'Ivoire">Côte d'Ivoire</option>
-        <option value="Croatia">Croatia</option>
-        <option value="Cyprus">Cyprus</option>
-        <option value="Czechia">Czechia</option>
-        <option value="Democratic Republic of the Congo">Democratic Republic of the Congo</option>
-        <option value="Denmark">Denmark</option>
-        <option value="Dominica">Dominica</option>
-        <option value="Dominican Republic">Dominican Republic</option>
-        <option value="Ecuador">Ecuador</option>
-        <option value="Egypt">Egypt</option>
-        <option value="El Salvador">El Salvador</option>
-        <option value="Estonia">Estonia</option>
-        <option value="Eswatini">Eswatini</option>
-        <option value="Fiji">Fiji</option>
-        <option value="Finland">Finland</option>
-        <option value="France">France</option>
-        <option value="Gabon">Gabon</option>
-        <option value="Gambia">Gambia</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Germany">Germany</option>
-        <option value="Ghana">Ghana</option>
-        <option value="Greece">Greece</option>
-        <option value="Grenada">Grenada</option>
-        <option value="Guatemala">Guatemala</option>
-        <option value="Guinea-Bissau">Guinea-Bissau</option>
-        <option value="Guyana">Guyana</option>
-        <option value="Honduras">Honduras</option>
-        <option value="Hong Kong">Hong Kong</option>
-        <option value="Hungary">Hungary</option>
-        <option value="Iceland">Iceland</option>
-        <option value="India">India</option>
-        <option value="Indonesia">Indonesia</option>
-        <option value="Iraq">Iraq</option>
-        <option value="Ireland">Ireland</option>
-        <option value="Israel">Israel</option>
-        <option value="Italy">Italy</option>
-        <option value="Jamaica">Jamaica</option>
-        <option value="Japan">Japan</option>
-        <option value="Jordan">Jordan</option>
-        <option value="Kazakhstan">Kazakhstan</option>
-        <option value="Kenya">Kenya</option>
-        <option value="Kosovo">Kosovo</option>
-        <option value="Kuwait">Kuwait</option>
-        <option value="Kyrgyzstan">Kyrgyzstan</option>
-        <option value="Laos">Laos</option>
-        <option value="Latvia">Latvia</option>
-        <option value="Lebanon">Lebanon</option>
-        <option value="Liberia">Liberia</option>
-        <option value="Libya">Libya</option>
-        <option value="Lithuania">Lithuania</option>
-        <option value="Luxembourg">Luxembourg</option>
-        <option value="Macao">Macao</option>
-        <option value="Madagascar">Madagascar</option>
-        <option value="Malawi">Malawi</option>
-        <option value="Malaysia">Malaysia</option>
-        <option value="Maldives">Maldives</option>
-        <option value="Mali">Mali</option>
-        <option value="Malta">Malta</option>
-        <option value="Mauritania">Mauritania</option>
-        <option value="Mauritius">Mauritius</option>
-        <option value="Mexico">Mexico</option>
-        <option value="Micronesia">Micronesia</option>
-        <option value="Moldova">Moldova</option>
-        <option value="Mongolia">Mongolia</option>
-        <option value="Montenegro">Montenegro</option>
-        <option value="Montserrat">Montserrat</option>
-        <option value="Morocco">Morocco</option>
-        <option value="Mozambique">Mozambique</option>
-        <option value="Myanmar">Myanmar</option>
-        <option value="Namibia">Namibia</option>
-        <option value="Nauru">Nauru</option>
-        <option value="Nepal">Nepal</option>
-        <option value="Netherlands">Netherlands</option>
-        <option value="New Zealand">New Zealand</option>
-        <option value="Nicaragua">Nicaragua</option>
-        <option value="Niger">Niger</option>
-        <option value="Nigeria">Nigeria</option>
-        <option value="North Macedonia">North Macedonia</option>
-        <option value="Norway">Norway</option>
-        <option value="Oman">Oman</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="Palau">Palau</option>
-        <option value="Panama">Panama</option>
-        <option value="Papua New Guinea">Papua New Guinea</option>
-        <option value="Paraguay">Paraguay</option>
-        <option value="Peru">Peru</option>
-        <option value="Philippines">Philippines</option>
-        <option value="Poland">Poland</option>
-        <option value="Portugal">Portugal</option>
-        <option value="Qatar">Qatar</option>
-        <option value="Republic of the Congo">Republic of the Congo</option>
-        <option value="Romania">Romania</option>
-        <option value="Russia">Russia</option>
-        <option value="Rwanda">Rwanda</option>
-        <option value="Saint Kitts And Nevis">Saint Kitts And Nevis</option>
-        <option value="Saint Lucia">Saint Lucia</option>
-        <option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
-        <option value="Sao Tome And Principe">Sao Tome And Principe</option>
-        <option value="Saudi Arabia">Saudi Arabia</option>
-        <option value="Senegal">Senegal</option>
-        <option value="Serbia">Serbia</option>
-        <option value="Seychelles">Seychelles</option>
-        <option value="Sierra Leone">Sierra Leone</option>
-        <option value="Singapore">Singapore</option>
-        <option value="Slovakia">Slovakia</option>
-        <option value="Slovenia">Slovenia</option>
-        <option value="Solomon Islands">Solomon Islands</option>
-        <option value="South Africa">South Africa</option>
-        <option value="South Korea">South Korea</option>
-        <option value="Spain">Spain</option>
-        <option value="Sri Lanka">Sri Lanka</option>
-        <option value="Suriname">Suriname</option>
-        <option value="Sweden">Sweden</option>
-        <option value="Switzerland">Switzerland</option>
-        <option value="Taiwan">Taiwan</option>
-        <option value="Tajikistan">Tajikistan</option>
-        <option value="Tanzania">Tanzania</option>
-        <option value="Thailand">Thailand</option>
-        <option value="Tonga">Tonga</option>
-        <option value="Trinidad and Tobago">Trinidad and Tobago</option>
-        <option value="Tunisia">Tunisia</option>
-        <option value="Türkiye">Türkiye</option>
-        <option value="Turkmenistan">Turkmenistan</option>
-        <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
-        <option value="Uganda">Uganda</option>
-        <option value="Ukraine">Ukraine</option>
-        <option value="United Arab Emirates">United Arab Emirates</option>
-        <option value="United Kingdom">United Kingdom</option>
-        <option value="United States">United States</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="Uzbekistan">Uzbekistan</option>
-        <option value="Vanuatu">Vanuatu</option>
-        <option value="Venezuela">Venezuela</option>
-        <option value="Vietnam">Vietnam</option>
-        <option value="Yemen">Yemen</option>
-        <option value="Zambia">Zambia</option>
-        <option value="Zimbabwe">Zimbabwe</option>
-      </select>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <select class="form-control margin-btm-20" name="purchased-purpose" required>
-        <option value="" data-display="* Purchased Purpose">* Purchased Purpose</option>
-        <option value="I buy them for myself">I buy them for myself</option>
-        <option value="I buy them for project">I buy them for project</option>
-        <option value="I want to sell them">I want to sell them</option>
-      </select>
-    </div>
-    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <input class="form-control margin-btm-20" type="text" name="website" placeholder="Website">
-    </div>
-  </div>
-  <textarea class="form-control height-150 margin-btm-30" type="text" name="message" placeholder="* Message" required></textarea>
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary btn-radius">Send it NOW</button>
-  </div>
-</form>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="assets/bootstrap.bundle.min.js"></script>
-    <script>
-      function closebar_cookie() {
-        document.getElementById("cookie-bar").style.display = "none";
-      }
-    </script>
-  </body>
-</html>
+{% endblock %}

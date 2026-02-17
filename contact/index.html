@@ -1,31 +1,27 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+{% extends "base.njk" %}
+{% set activeNav = "contact" %}
+{% set showLanguageLink = true %}
+{% set plainFeedbackLink = true %}
+
+{% block head %}
+    <link rel="canonical" href="/contact/">
+    <link rel="alternate" hreflang="en" href="/contact/">
+    <meta property="og:url" content="/contact/">
     <title>Contact Us - DAVIS</title>
     <meta name="keywords" content="DAVIS">
-    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <link rel="canonical" href="index.html">
-    <link rel="icon" href="../static/assets/favicon.png">
-    <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">
-    <meta name="applicable-device" content="pc,mobile">
-    <link rel="alternate" hreflang="en" href="index.html">
-    <meta property="og:url" content="index.html">
-    <meta property="og:type" content="website">
+    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="/static/assets/favicon.png">
+    <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">    <meta property="og:type" content="website">
     <meta property="og:title" content="Contact Us - DAVIS">
     <meta property="og:description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <meta property="og:image" content="../static/leader.jpg">
-    <meta property="og:image:secure_url" content="../static/leader.jpg">
+    <meta property="og:image" content="/static/leader.jpg">
+    <meta property="og:image:secure_url" content="/static/leader.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Contact Us">
     <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
-    <link rel="apple-touch-icon" href="../static/assets/hazo_logo.webp">
+    <link rel="apple-touch-icon" href="/static/assets/hazo_logo.webp">
     <meta name="apple-mobile-web-app-title" content="HAZO">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../static/css/global.css">
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -45,11 +41,11 @@
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "name": "../static/assets/leader.jpg"
+          "name": "/static/assets/leader.jpg"
         },
         "image": {
           "@type": "ImageObject",
-          "url": "../static/assets/leader.jpg",
+          "url": "/static/assets/leader.jpg",
           "width": 1200,
           "height": 630
         },
@@ -58,7 +54,7 @@
           "name": "DAVIS",
           "logo": {
             "@type": "ImageObject",
-            "url": "../static/assets/logo.jpg",
+            "url": "/static/assets/logo.jpg",
             "width": 181,
             "height": 60
           }
@@ -69,7 +65,7 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "image": "../static/about/about.jpg",
+        "image": "/static/about/about.jpg",
         "name": "DAVIS",
         "address": {
           "@type": "PostalAddress",
@@ -95,7 +91,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://davisawning.com",
-        "logo": "../static/assets/davis-logo.png",
+        "logo": "/static/assets/davis-logo.png",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+86-135-2891-5770",
@@ -191,37 +187,15 @@
         });
       });
     </script>
-  </head>
-  <body>
-    <header id="luxbar" class="luxbar-fixed">
-      <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox">
-      <div class="luxbar-menu luxbar-menu-right luxbar-menu-white">
-        <div class="container">
-          <ul class="luxbar-navigation">
-            <li class="luxbar-header">
-              <a href="../index.html">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/hazo_logo.webp" height="35" alt="HAZO Logo">
-                  <img src="../static/assets/hazo_logo.png" height="35" alt="HAZO Logo">
-                </picture>
-              </a>
-              <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
-            </li>
-            <li class="luxbar-item "><a href="../index.html">Home</a></li>
-            <li class="luxbar-item "><a href="#" data-bs-toggle="modal" data-bs-target="#allproducts">Products</a></li>
-            <li class="luxbar-item "><a href="../catalog/index.html">Catalog</a></li>
-            <li class="luxbar-item "><a href="../about/index.html">About</a></li>
-            <li class="luxbar-item active"><a href="index.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <div class="margin-top-58"></div>
+{% endblock %}
+
+{% block content %}
+<div class="margin-top-58"></div>
     <div class="bg-grey">
   <div class="container padding-top-15">
     <div class="row">
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="font-size-14"><a href="../index.html" class="hover-color">Home</a> / <span class="text-primary">Contact Us</span></p>
+        <p class="font-size-14"><a href="/index.html" class="hover-color">Home</a> / <span class="text-primary">Contact Us</span></p>
       </div>
     </div>
   </div>
@@ -233,8 +207,8 @@
       <div class="col-xxl-6 col-xl-7 col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <a href="https://maps.app.goo.gl/4XB3Qci8ASWNgxf66" target="_blank">
           <picture>
-            <source type="image/webp" srcset="../static/contact/map.webp" alt="DAVIS Google Map" width="800" height="570" class="img-responsive img-rounded">
-            <img src="../static/contact/map.jpg" alt="DAVIS Google Map" width="800" height="570" class="img-responsive img-rounded">
+            <source type="image/webp" srcset="/static/contact/map.webp" alt="DAVIS Google Map" width="800" height="570" class="img-responsive img-rounded">
+            <img src="/static/contact/map.jpg" alt="DAVIS Google Map" width="800" height="570" class="img-responsive img-rounded">
           </picture>
         </a>
       </div>
@@ -249,48 +223,48 @@
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://www.facebook.com/DavisAwning" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/facebook.webp" alt="Facebook" width="39" height="39">
-                <img src="../static/assets/facebook.png" alt="Facebook" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/facebook.webp" alt="Facebook" width="39" height="39">
+                <img src="/static/assets/facebook.png" alt="Facebook" width="39" height="39">
               </picture>
             </a>
           </div>
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://twitter.com/davisawning" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/twitter.webp" alt="Twitter" width="39" height="39">
-                <img src="../static/assets/twitter.png" alt="Twitter" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/twitter.webp" alt="Twitter" width="39" height="39">
+                <img src="/static/assets/twitter.png" alt="Twitter" width="39" height="39">
               </picture>
             </a>
           </div>
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://www.linkedin.com/company/davisawning" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/linkedin.webp" alt="Linkedin" width="39" height="39">
-                <img src="../static/assets/linkedin.png" alt="Linkedin" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/linkedin.webp" alt="Linkedin" width="39" height="39">
+                <img src="/static/assets/linkedin.png" alt="Linkedin" width="39" height="39">
               </picture>
             </a>
           </div>
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://www.instagram.com/davisawnings" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/instagram.webp" alt="Instagram" width="39" height="39">
-                <img src="../static/assets/instagram.png" alt="Instagram" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/instagram.webp" alt="Instagram" width="39" height="39">
+                <img src="/static/assets/instagram.png" alt="Instagram" width="39" height="39">
               </picture>
             </a>
           </div>
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://www.pinterest.com/davisawning/" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/pinterest.webp" alt="Pinterest" width="39" height="39">
-                <img src="../static/assets/pinterest.png" alt="Pinterest" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/pinterest.webp" alt="Pinterest" width="39" height="39">
+                <img src="/static/assets/pinterest.png" alt="Pinterest" width="39" height="39">
               </picture>
             </a>
           </div>
           <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
             <a href="https://www.youtube.com/@davisawning" target="_blank">
               <picture>
-                <source type="image/webp" srcset="../static/assets/youtube.webp" alt="Youtube" width="39" height="39">
-                <img src="../static/assets/youtube.png" alt="Youtube" width="39" height="39">
+                <source type="image/webp" srcset="/static/assets/youtube.webp" alt="Youtube" width="39" height="39">
+                <img src="/static/assets/youtube.png" alt="Youtube" width="39" height="39">
               </picture>
             </a>
           </div>
@@ -517,216 +491,4 @@
 </form>
   </div>
 </div>
-    <div class="container">
-      <div class="row margin-top-50 padding-btm-20">
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-30 hidden-xs">
-          <div class="img-width-200 margin-btm-20">
-            <picture>
-              <source type="image/webp" srcset="../static/assets/hazo_logo.webp" height="35" alt="HAZO Logo">
-              <img src="../static/assets/hazo_logo.png" height="35" alt="HAZO Logo">
-            </picture>
-          </div>
-          <p class="text-primary font-size-18 font-weight-700">Foshan Davis Outdoor Products Co., Ltd.</p>
-          <p>Our Mission To Customers:</p>
-          <p>To obtain your trust with professional</p>
-          <p>Services & quality productions</p>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 margin-btm-30 hidden-xs">
-          <p class="text-black font-size-20 font-weight-700">Products</p>
-          <div class="row">
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <p><a href="../retractable-roof/index.html" class="hover-color">Retractable Roof</a></p>
-              <p><a href="../full-cassette-awning/index.html" class="hover-color">Full Cassette Awning</a></p>
-              <p><a href="../bioclimate-pergola/index.html" class="hover-color">Bioclimate Pergola</a></p>
-              <p><a href="../zip-screen/index.html" class="hover-color">Zip Screen</a></p>
-              <p><a href="../window-awning/index.html" class="hover-color">Window Awning</a></p>
-            </div>
-            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-              <p><a href="../original-awning/index.html" class="hover-color">Original Awning</a></p>
-              <p><a href="../external-roof-blinds/index.html" class="hover-color">External Roof Blinds</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 margin-btm-30">
-          <p class="text-black font-size-20 font-weight-700">Contact Us</p>
-          <p>If you have any questions, please contact us !</p>
-          <p><span class="text-black">E-mail:</span> <a href="mailto:melissa@davisawning.com" target="_blank">melissa@davisawning.com</a></p>
-          <p><span class="text-black">Phone:</span> 0086 135 2891 5770</p>
-          <p><span class="text-black">Address:</span> Shashui industrial zone, Songgang, Shishan Town, Nanhai District, Foshan City, Guangdong Province, China, 528234</p>
-          <div class="row margin-top-30 img-width-600">
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.facebook.com/DavisAwning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/facebook.webp" alt="Facebook" width="39" height="39">
-                  <img src="../static/assets/facebook.png" alt="Facebook" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://twitter.com/davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/twitter.webp" alt="Twitter" width="39" height="39">
-                  <img src="../static/assets/twitter.png" alt="Twitter" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.linkedin.com/company/davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/linkedin.webp" alt="Linkedin" width="39" height="39">
-                  <img src="../static/assets/linkedin.png" alt="Linkedin" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.instagram.com/davisawnings" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/instagram.webp" alt="Instagram" width="39" height="39">
-                  <img src="../static/assets/instagram.png" alt="Instagram" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.pinterest.com/davisawning/" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/pinterest.webp" alt="Pinterest" width="39" height="39">
-                  <img src="../static/assets/pinterest.png" alt="Pinterest" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 margin-btm-20">
-              <a href="https://www.youtube.com/@davisawning" target="_blank">
-                <picture>
-                  <source type="image/webp" srcset="../static/assets/youtube.webp" alt="Youtube" width="39" height="39">
-                  <img src="../static/assets/youtube.png" alt="Youtube" width="39" height="39">
-                </picture>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-grey text-center padding-top-20 padding-btm-20">Copyright © 1992-2025 Foshan Davis Outdoor Products Co., Ltd. | <a href="../sitemap.xml" class="hover-color" target="_blank">Sitemap</a> | <a href="#" data-bs-toggle="modal" data-bs-target="#language" class="hover-color">Language</a></div>
-    <div class="feedback">
-      <a href="#get-a-free-quote" title="Get a Free Quote">
-        <picture>
-          <source type="image/webp" srcset="../static/assets/contact-support.webp" width="35" height="33" alt="Get a Free Quote">
-          <img src="../static/assets/contact-support.png" width="35" height="33" alt="Get a Free Quote">
-        </picture>
-      </a>
-    </div>
-    <div class="back-to-top">
-      <a href="#">
-        <picture>
-          <source type="image/webp" srcset="../static/assets/back-to-top.webp" width="35" height="33" alt="Back To Top">
-          <img src="../static/assets/back-to-top.png" width="35" height="33" alt="Back To Top">
-        </picture>
-      </a>
-    </div>
-    <div class="cookie-bar" id="cookie-bar">
-      <div class="container padding-top-30 padding-btm-30">
-        <p class="font-size-20 text-black font-weight-500">We use cookies</p>
-        <p>We use cookies and other tracking technologies to improve your browsing experience on our website, to show you personalized content and targeted ads, to analyze our website traffic, and to understand where our visitors are coming from.</p>
-        <button class="btn btn-primary btn-radius margin-right-15" onclick="closebar_cookie()">Accept</button>
-        <button class="btn btn-transparent btn-radius" onclick="closebar_cookie()">Refuse</button>
-      </div>
-    </div>
-    <div class="modal fade" id="allproducts" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="font-nunito-sans modal-title font-size-20 text-black font-weight-700" id="exampleModalLabel">Products</p>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="row margin-top-10">
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../full-cassette-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/full-cassette-awning.webp" width="800" height="700" class="img-responsive" alt="Full Cassette Awning">
-                      <img src="../static/products/full-cassette-awning.jpg" width="800" height="700" class="img-responsive" alt="Full Cassette Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../full-cassette-awning/index.html" class="hover-color">Full Cassette Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../retractable-roof/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/retractable-roof.webp" width="800" height="700" class="img-responsive" alt="Retractable Roof">
-                      <img src="../static/products/retractable-roof.jpg" width="800" height="700" class="img-responsive" alt="Retractable Roof">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../retractable-roof/index.html" class="hover-color">Retractable Roof</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../bioclimate-pergola/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/bioclimate-pergola.webp" width="800" height="700" class="img-responsive" alt="Bioclimate Pergola">
-                      <img src="../static/products/bioclimate-pergola.jpg" width="800" height="700" class="img-responsive" alt="Bioclimate Pergola">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../bioclimate-pergola/index.html" class="hover-color">Bioclimate Pergola</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../zip-screen/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/zip-screen.webp" width="800" height="700" class="img-responsive" alt="Zip Screen">
-                      <img src="../static/products/zip-screen.jpg" width="800" height="700" class="img-responsive" alt="Zip Screen">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../zip-screen/index.html" class="hover-color">Zip Screen</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../window-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/window-awning.webp" width="800" height="700" class="img-responsive" alt="Window Awning">
-                      <img src="../static/products/window-awning.jpg" width="800" height="700" class="img-responsive" alt="Window Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../window-awning/index.html" class="hover-color">Window Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../original-awning/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/original-awning.webp" width="800" height="700" class="img-responsive" alt="Original Awning">
-                      <img src="../static/products/original-awning.jpg" width="800" height="700" class="img-responsive" alt="Original Awning">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../original-awning/index.html" class="hover-color">Original Awning</a></p>
-              </div>
-              <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
-                <div class="img-width-800 image-margin-center margin-btm-10">
-                  <a href="../external-roof-blinds/index.html">
-                    <picture>
-                      <source type="image/webp" srcset="../static/products/external-roof-blinds.webp" width="800" height="700" class="img-responsive" alt="External Roof Blinds">
-                      <img src="../static/products/external-roof-blinds.jpg" width="800" height="700" class="img-responsive" alt="External Roof Blinds">
-                    </picture>
-                  </a>
-                </div>
-                <p class="font-size-18 text-center font-weight-700"><a href="../external-roof-blinds/index.html" class="hover-color">External Roof Blinds</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="../assets/bootstrap.bundle.min.js"></script>
-    <script>
-      function closebar_cookie() {
-        document.getElementById("cookie-bar").style.display = "none";
-      }
-    </script>
-  </body>
-</html>
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+  "name": "hazo-world",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve --watch",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
