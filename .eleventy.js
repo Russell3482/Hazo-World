@@ -1,6 +1,8 @@
 const nunjucks = require("nunjucks");
 
 module.exports = function (eleventyConfig) {
+  const pathPrefix = process.env.ELEVENTY_PATH_PREFIX || "/";
+
   eleventyConfig.setLibrary(
     "njk",
     new nunjucks.Environment(
@@ -12,6 +14,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("sitemap.xml");
 
   return {
+    pathPrefix,
     dir: {
       input: ".",
       includes: "_includes",

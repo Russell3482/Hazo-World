@@ -4,23 +4,23 @@
 {% set plainFeedbackLink = false %}
 
 {% block head %}
-    <link rel="canonical" href="/about/">
-    <link rel="alternate" hreflang="en" href="/about/">
-    <meta property="og:url" content="/about/">
+    <link rel="canonical" href="{{ '/about/' | url }}">
+    <link rel="alternate" hreflang="en" href="{{ '/about/' | url }}">
+    <meta property="og:url" content="{{ '/about/' | url }}">
     <title>About DAVIS - DAVIS</title>
     <meta name="keywords" content="DAVIS">
-    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="/static/assets/favicon.png">
+    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="{{ '/static/assets/favicon.png' | url }}">
     <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">    <meta property="og:type" content="website">
     <meta property="og:title" content="About DAVIS - DAVIS">
     <meta property="og:description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <meta property="og:image" content="/static/assets/leader.jpg">
-    <meta property="og:image:secure_url" content="/static/assets/leader.jpg">
+    <meta property="og:image" content="{{ '/static/assets/leader.jpg' | url }}">
+    <meta property="og:image:secure_url" content="{{ '/static/assets/leader.jpg' | url }}">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="About DAVIS">
     <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
-    <link rel="apple-touch-icon" href="/static/assets/hazo_logo.webp">
+    <link rel="apple-touch-icon" href="{{ '/static/assets/hazo_logo.webp' | url }}">
     <meta name="apple-mobile-web-app-title" content="DAVIS">
     <script type="application/ld+json">
       {
@@ -41,11 +41,11 @@
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "name": "/static/assets/leader.jpg"
+          "name": "{{ '/static/assets/leader.jpg' | url }}"
         },
         "image": {
           "@type": "ImageObject",
-          "url": "/static/assets/leader.jpg",
+          "url": "{{ '/static/assets/leader.jpg' | url }}",
           "width": 1200,
           "height": 630
         },
@@ -54,7 +54,7 @@
           "name": "DAVIS",
           "logo": {
             "@type": "ImageObject",
-            "url": "/static/assets/logo.jpg",
+            "url": "{{ '/static/assets/logo.jpg' | url }}",
             "width": 181,
             "height": 60
           }
@@ -68,7 +68,7 @@
         "name": "Davis Sunshade factory - Introduction",
         "description": "Foshan Davis Outdoor Products Co., Ltd. is a leading manufacturer of outdoor sunshade, dedicated to the design, development, production and sales of leisure outdoor products.",
         "thumbnailUrl": [
-          "/static/video/davis-sunshade-factory-introduction.jpg"
+          "{{ '/static/video/davis-sunshade-factory-introduction.jpg' | url }}"
         ],
         "uploadDate": "2024-09-10T00:00:00+00:00",
         "duration": "PT2M31S",
@@ -83,7 +83,7 @@
           "name": "DAVIS",
           "logo": {
             "@type": "ImageObject",
-            "url": "/static/assets/logo.jpg",
+            "url": "{{ '/static/assets/logo.jpg' | url }}",
             "width": 181,
             "height": 60
           }
@@ -94,7 +94,7 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "image": "/static/about/about.jpg",
+        "image": "{{ '/static/about/about.jpg' | url }}",
         "name": "DAVIS",
         "address": {
           "@type": "PostalAddress",
@@ -120,7 +120,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://davisawning.com",
-        "logo": "/static/assets/davis-logo.png",
+        "logo": "{{ '/static/assets/davis-logo.png' | url }}",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+86-135-2891-5770",
@@ -224,7 +224,7 @@
   <div class="container padding-top-15">
     <div class="row">
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="font-size-14"><a href="/index.html" class="hover-color">Home</a> / <span class="text-primary">About DAVIS</span></p>
+        <p class="font-size-14"><a href="{{ '/index.html' | url }}" class="hover-color">Home</a> / <span class="text-primary">About DAVIS</span></p>
       </div>
     </div>
   </div>
@@ -235,8 +235,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-manufacturing-base.webp" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-manufacturing-base.html" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-manufacturing-base.webp' | url }}" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-manufacturing-base.html' | url }}" alt="Manufacturing Base" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Manufacturing Base</p>
@@ -244,8 +244,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-showroom.webp" alt="Showroom" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-showroom.html" alt="Showroom" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-showroom.webp' | url }}" alt="Showroom" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-showroom.html' | url }}" alt="Showroom" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Showroom</p>
@@ -253,8 +253,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-completed-projects.webp" alt="Completed Projects" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-completed-projects.html" alt="Completed Projects" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-completed-projects.webp' | url }}" alt="Completed Projects" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-completed-projects.html' | url }}" alt="Completed Projects" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Completed Projects</p>
@@ -262,8 +262,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-export-to-70-countries.webp" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-export-to-70-countries.html" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-export-to-70-countries.webp' | url }}" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-export-to-70-countries.html' | url }}" alt="Export To 70+ Countries" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Export To 70+ Countries</p>
@@ -271,8 +271,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-30-rd-team-members.webp" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-30-rd-team-members.html" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-30-rd-team-members.webp' | url }}" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-30-rd-team-members.html' | url }}" alt="30+ R&D Team Members" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">30+ R&D Team Members</p>
@@ -280,8 +280,8 @@
     <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-4 col-xs-6 margin-btm-20">
       <div class="img-width-400 image-margin-center margin-btm-20">
         <picture>
-          <source type="image/webp" srcset="/static/about/icon-200-national-patents.webp" alt="200+ National Patents" width="400" height="150" class="img-responsive">
-          <img src="/static/about/icon-200-national-patents.html" alt="200+ National Patents" width="400" height="150" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/icon-200-national-patents.webp' | url }}" alt="200+ National Patents" width="400" height="150" class="img-responsive">
+          <img src="{{ '/static/about/icon-200-national-patents.html' | url }}" alt="200+ National Patents" width="400" height="150" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">200+ National Patents</p>
@@ -295,16 +295,16 @@
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 margin-btm-40">
       <div class="img-width-800 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/about.webp" width="800" height="450" alt="About DAVIS" class="img-responsive">
-          <img src="/static/about/about.jpg" width="800" height="450" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/about.webp' | url }}" width="800" height="450" alt="About DAVIS" class="img-responsive">
+          <img src="{{ '/static/about/about.jpg' | url }}" width="800" height="450" alt="About DAVIS" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 margin-btm-40">
       <div class="img-width-800 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/about-2.webp" width="800" height="450" alt="About DAVIS" class="img-responsive">
-          <img src="/static/about/about-2.jpg" width="800" height="450" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/about-2.webp' | url }}" width="800" height="450" alt="About DAVIS" class="img-responsive">
+          <img src="{{ '/static/about/about-2.jpg' | url }}" width="800" height="450" alt="About DAVIS" class="img-responsive">
         </picture>
       </div>
     </div>
@@ -313,8 +313,8 @@
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
       <div class="img-width-600 image-margin-center margin-btm-10">
         <picture>
-          <source type="image/webp" srcset="/static/about/factory-interior-environment-1.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
-          <img src="/static/about/factory-interior-environment-1.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/factory-interior-environment-1.webp' | url }}" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/factory-interior-environment-1.jpg' | url }}" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Factory Interior Environment</p>
@@ -322,8 +322,8 @@
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
       <div class="img-width-600 image-margin-center margin-btm-10">
         <picture>
-          <source type="image/webp" srcset="/static/about/factory-interior-environment-2.webp" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
-          <img src="/static/about/factory-interior-environment-2.jpg" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/factory-interior-environment-2.webp' | url }}" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/factory-interior-environment-2.jpg' | url }}" alt="Factory Interior Environment" width="600" height="400" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Factory Interior Environment</p>
@@ -331,8 +331,8 @@
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
       <div class="img-width-600 image-margin-center margin-btm-10">
         <picture>
-          <source type="image/webp" srcset="/static/about/indoor-showroom-environment.webp" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
-          <img src="/static/about/indoor-showroom-environment.jpg" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/indoor-showroom-environment.webp' | url }}" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/indoor-showroom-environment.jpg' | url }}" alt="Indoor Showroom Environment" width="600" height="400" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Indoor Showroom Environment</p>
@@ -340,8 +340,8 @@
     <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
       <div class="img-width-600 image-margin-center margin-btm-10">
         <picture>
-          <source type="image/webp" srcset="/static/about/rooftop-showroom-environment.webp" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
-          <img src="/static/about/rooftop-showroom-environment.jpg" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/rooftop-showroom-environment.webp' | url }}" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/rooftop-showroom-environment.jpg' | url }}" alt="Rooftop Showroom Environment" width="600" height="400" class="img-responsive">
         </picture>
       </div>
       <p class="text-center">Rooftop Showroom Environment</p>
@@ -355,8 +355,8 @@
   <div class="container padding-top-50 padding-btm-40">
     <p class="font-size-25 text-black text-center font-weight-500 margin-btm-30">Sales Team</p>
     <picture>
-      <source type="image/webp" srcset="/static/about/sales-team.webp" alt="Sales Team" width="1400" height="570" class="img-responsive margin-btm-30">
-      <img src="/static/about/sales-team.jpg" alt="Sales Team" width="1400" height="570" class="img-responsive margin-btm-30">
+      <source type="image/webp" srcset="{{ '/static/about/sales-team.webp' | url }}" alt="Sales Team" width="1400" height="570" class="img-responsive margin-btm-30">
+      <img src="{{ '/static/about/sales-team.jpg' | url }}" alt="Sales Team" width="1400" height="570" class="img-responsive margin-btm-30">
     </picture>
     <p class="text-justify">The advancement of an enterprise is inseparable from daily innovation.And every innovation and breakthrough is inseparable from the cooperation and cooperation of the team.Every time the team cooperates and cooperates, it will form good working habits of the employees of the enterprise, which will eventually become the corporate culture.The combination of the trinity can burst out unlimited energy, making the pace of enterprise development faster and more stable.</p>
   </div>
@@ -367,48 +367,48 @@
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-1.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-1.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-1.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-1.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-2.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-2.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-2.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-2.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-3.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-3.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-3.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-3.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-4.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-4.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-4.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-4.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-5.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-5.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-5.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-5.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-btm-30">
       <div class="img-width-600 image-margin-center">
         <picture>
-          <source type="image/webp" srcset="/static/about/manufactory-6.webp" alt="Manufactory" width="600" height="400" class="img-responsive">
-          <img src="/static/about/manufactory-6.jpg" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/about/manufactory-6.webp' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
+          <img src="{{ '/static/about/manufactory-6.jpg' | url }}" alt="Manufactory" width="600" height="400" class="img-responsive">
         </picture>
       </div>
     </div>
@@ -421,8 +421,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/expert-in-customized-design-solutions.webp" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/expert-in-customized-design-solutions.jpg" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/expert-in-customized-design-solutions.webp' | url }}" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/expert-in-customized-design-solutions.jpg' | url }}" alt="Expert in Customized Design Solutions" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Expert in Customized Design Solutions</p>
@@ -430,8 +430,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/quick-3d-printed-sample-prototyping.webp" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/quick-3d-printed-sample-prototyping.jpg" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/quick-3d-printed-sample-prototyping.webp' | url }}" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/quick-3d-printed-sample-prototyping.jpg' | url }}" alt="Quick 3D Printed Sample Prototyping" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Quick 3D Printed Sample Prototyping</p>
@@ -439,8 +439,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/site-based-design-technical-drawings.webp" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/site-based-design-technical-drawings.jpg" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/site-based-design-technical-drawings.webp' | url }}" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/site-based-design-technical-drawings.jpg' | url }}" alt="Site-Based Design & Technical Drawings" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Site-Based Design & Technical Drawings</p>
@@ -448,8 +448,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/hands-on-training-at-our-factory.webp" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/hands-on-training-at-our-factory.jpg" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/hands-on-training-at-our-factory.webp' | url }}" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/hands-on-training-at-our-factory.jpg' | url }}" alt="Hands-On Training at Our Factory" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Hands-On Training at Our Factory</p>
@@ -457,8 +457,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/on-site-training-for-dealers.webp" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/on-site-training-for-dealers.jpg" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/on-site-training-for-dealers.webp' | url }}" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/on-site-training-for-dealers.jpg' | url }}" alt="On-Site Training for Dealers" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">On-Site Training for Dealers</p>
@@ -466,8 +466,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/professional-site-supervision-guidance.webp" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/professional-site-supervision-guidance.jpg" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/professional-site-supervision-guidance.webp' | url }}" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/professional-site-supervision-guidance.jpg' | url }}" alt="Professional Site Supervision & Guidance" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Professional Site Supervision & Guidance</p>
@@ -475,8 +475,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/international-installation-support.webp" alt="International Installation Support" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/international-installation-support.jpg" alt="International Installation Support" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/international-installation-support.webp' | url }}" alt="International Installation Support" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/international-installation-support.jpg' | url }}" alt="International Installation Support" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">International Installation Support</p>
@@ -484,8 +484,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/20-years-of-global-project-experience.webp" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/20-years-of-global-project-experience.jpg" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/20-years-of-global-project-experience.webp' | url }}" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/20-years-of-global-project-experience.jpg' | url }}" alt="20+ Years of Global Project Experience" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">20+ Years of Global Project Experience</p>
@@ -493,8 +493,8 @@
   <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 margin-btm-20">
     <div class="img-width-600 image-margin-center margin-btm-10">
       <picture>
-        <source type="image/webp" srcset="/static/why-choose-us/reliable-after-sales-support-warranty.webp" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
-        <img src="/static/why-choose-us/reliable-after-sales-support-warranty.jpg" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
+        <source type="image/webp" srcset="{{ '/static/why-choose-us/reliable-after-sales-support-warranty.webp' | url }}" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
+        <img src="{{ '/static/why-choose-us/reliable-after-sales-support-warranty.jpg' | url }}" alt="Reliable After-Sales Support & Warranty" width="600" height="400" class="img-responsive">
       </picture>
     </div>
     <p class="text-center">Reliable After-Sales Support & Warranty</p>
@@ -505,20 +505,20 @@
     <div class="img-pr">
       <div class="hidden-md hidden-xs hidden-sm">
         <picture>
-          <source type="image/webp" srcset="/static/assets/faq-support.webp" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
-          <img src="/static/assets/faq-support.jpg" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support.webp' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support.jpg' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
         </picture>
       </div>
       <div class="hidden-lg hidden-xl hidden-xxl">
         <picture>
-          <source type="image/webp" srcset="/static/assets/faq-support-small.webp" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
-          <img src="/static/assets/faq-support-small.jpg" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support-small.webp' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support-small.jpg' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
         </picture>
       </div>
       <div class="img-text text-center width-bf95">
         <p class="font-comfortaa font-size-28 font-weight-700 margin-btm-20">FAQ & Support</p>
         <p class="margin-btm-40">Do you have any questions? We will be more than happy to solve your doubts, whether you are an individual or a professional.</p>
-        <a href="/contact/" class="btn btn-primary btn-radius">Contact Us</a>
+        <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-radius">Contact Us</a>
       </div>
     </div>
 {% endblock %}

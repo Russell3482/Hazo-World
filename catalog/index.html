@@ -4,23 +4,23 @@
 {% set plainFeedbackLink = false %}
 
 {% block head %}
-    <link rel="canonical" href="/catalog/">
-    <link rel="alternate" hreflang="en" href="/catalog/">
-    <meta property="og:url" content="/catalog/">
+    <link rel="canonical" href="{{ '/catalog/' | url }}">
+    <link rel="alternate" hreflang="en" href="{{ '/catalog/' | url }}">
+    <meta property="og:url" content="{{ '/catalog/' | url }}">
     <title>Catalog - DAVIS</title>
     <meta name="keywords" content="DAVIS">
-    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="/static/assets/favicon.png">
+    <meta name="description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">    <link rel="icon" href="{{ '/static/assets/favicon.png' | url }}">
     <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">    <meta property="og:type" content="website">
     <meta property="og:title" content="Catalog - DAVIS">
     <meta property="og:description" content="DAVIS was founded in 1992, focusing on the production of outdoor sunshade products.">
-    <meta property="og:image" content="/static/assets/leader.jpg">
-    <meta property="og:image:secure_url" content="/static/assets/leader.jpg">
+    <meta property="og:image" content="{{ '/static/assets/leader.jpg' | url }}">
+    <meta property="og:image:secure_url" content="{{ '/static/assets/leader.jpg' | url }}">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Catalog">
     <meta name="p:domain_verify" content="b56c2e42cf9e20f37093ec4240d6dbcd"/>
-    <link rel="apple-touch-icon" href="/static/assets/hazo_logo.webp">
+    <link rel="apple-touch-icon" href="{{ '/static/assets/hazo_logo.webp' | url }}">
     <meta name="apple-mobile-web-app-title" content="DAVIS">
     <script type="application/ld+json">
       {
@@ -41,11 +41,11 @@
         },
         "primaryImageOfPage": {
           "@type": "ImageObject",
-          "name": "/static/assets/leader.jpg"
+          "name": "{{ '/static/assets/leader.jpg' | url }}"
         },
         "image": {
           "@type": "ImageObject",
-          "url": "/static/assets/leader.jpg",
+          "url": "{{ '/static/assets/leader.jpg' | url }}",
           "width": 1200,
           "height": 630
         },
@@ -54,7 +54,7 @@
           "name": "DAVIS",
           "logo": {
             "@type": "ImageObject",
-            "url": "/static/assets/logo.jpg",
+            "url": "{{ '/static/assets/logo.jpg' | url }}",
             "width": 181,
             "height": 60
           }
@@ -65,7 +65,7 @@
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "image": "/static/about/about.jpg",
+        "image": "{{ '/static/about/about.jpg' | url }}",
         "name": "DAVIS",
         "address": {
           "@type": "PostalAddress",
@@ -91,7 +91,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "url": "https://davisawning.com",
-        "logo": "/static/assets/davis-logo.png",
+        "logo": "{{ '/static/assets/davis-logo.png' | url }}",
         "contactPoint": [{
           "@type": "ContactPoint",
           "telephone": "+86-135-2891-5770",
@@ -195,7 +195,7 @@
   <div class="container padding-top-15">
     <div class="row">
       <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <p class="font-size-14"><a href="/index.html" class="hover-color">Home</a> / <span class="text-primary">Catalog</span></p>
+        <p class="font-size-14"><a href="{{ '/index.html' | url }}" class="hover-color">Home</a> / <span class="text-primary">Catalog</span></p>
       </div>
     </div>
   </div>
@@ -207,164 +207,164 @@
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1iJblFOAy4LMw9mYdTP8_pAtLln-HVL8l/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/dq-a-full-cassette-awning.webp" width="800" height="700" class="img-responsive" alt="DQ-A Full Cassette Awning Catalog">
-            <img src="/static/products/dq-a-full-cassette-awning.jpg" width="800" height="700" class="img-responsive" alt="DQ-A Full Cassette Awning Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/dq-a-full-cassette-awning.webp' | url }}" width="800" height="700" class="img-responsive" alt="DQ-A Full Cassette Awning Catalog">
+            <img src="{{ '/static/products/dq-a-full-cassette-awning.jpg' | url }}" width="800" height="700" class="img-responsive" alt="DQ-A Full Cassette Awning Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/dq-a-full-cassette-awning/" class="hover-color" target="_blank">DQ-A Full Cassette Awning Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/dq-a-full-cassette-awning/' | url }}" class="hover-color" target="_blank">DQ-A Full Cassette Awning Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1GIqq4fvlyqqLo61gR1ptnYV3XwwVNw1K/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/dq-b-full-cassette-awning.webp" width="800" height="700" class="img-responsive" alt="DQ-B Full Cassette Awning Catalog">
-            <img src="/static/products/dq-b-full-cassette-awning.jpg" width="800" height="700" class="img-responsive" alt="DQ-B Full Cassette Awning Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/dq-b-full-cassette-awning.webp' | url }}" width="800" height="700" class="img-responsive" alt="DQ-B Full Cassette Awning Catalog">
+            <img src="{{ '/static/products/dq-b-full-cassette-awning.jpg' | url }}" width="800" height="700" class="img-responsive" alt="DQ-B Full Cassette Awning Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/dq-b-full-cassette-awning/" class="hover-color" target="_blank">DQ-B Full Cassette Awning Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/dq-b-full-cassette-awning/' | url }}" class="hover-color" target="_blank">DQ-B Full Cassette Awning Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1PsQnKciBRbjGuvSId210f-r-hxRChlC5/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/retractable-roof.webp" width="800" height="700" class="img-responsive" alt="Retractable Roof Catalog">
-            <img src="/static/products/retractable-roof.jpg" width="800" height="700" class="img-responsive" alt="Retractable Roof Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/retractable-roof.webp' | url }}" width="800" height="700" class="img-responsive" alt="Retractable Roof Catalog">
+            <img src="{{ '/static/products/retractable-roof.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Retractable Roof Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/retractable-roof/" class="hover-color" target="_blank">Retractable Roof Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/retractable-roof/' | url }}" class="hover-color" target="_blank">Retractable Roof Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/drive/folders/1OfpAL2lj5vBe-Z_P2sClMOdCCmNUhsxl?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/aluminum-bioclimate-pergola.webp" width="800" height="700" class="img-responsive" alt="Aluminum Bioclimate Pergola Catalog">
-            <img src="/static/products/aluminum-bioclimate-pergola.jpg" width="800" height="700" class="img-responsive" alt="Aluminum Bioclimate Pergola Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/aluminum-bioclimate-pergola.webp' | url }}" width="800" height="700" class="img-responsive" alt="Aluminum Bioclimate Pergola Catalog">
+            <img src="{{ '/static/products/aluminum-bioclimate-pergola.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Aluminum Bioclimate Pergola Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/aluminum-bioclimate-pergola/" class="hover-color" target="_blank">Aluminum Bioclimate Pergola Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/aluminum-bioclimate-pergola/' | url }}" class="hover-color" target="_blank">Aluminum Bioclimate Pergola Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/103q8lVsPKG_3HTU66O9IGU-5Ihz3_jaI/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/retractable-louvered-pergola.webp" width="800" height="700" class="img-responsive" alt="Retractable Louvered Pergola Catalog">
-            <img src="/static/products/retractable-louvered-pergola.jpg" width="800" height="700" class="img-responsive" alt="Retractable Louvered Pergola Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/retractable-louvered-pergola.webp' | url }}" width="800" height="700" class="img-responsive" alt="Retractable Louvered Pergola Catalog">
+            <img src="{{ '/static/products/retractable-louvered-pergola.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Retractable Louvered Pergola Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/retractable-louvered-pergola/" class="hover-color" target="_blank">Retractable Louvered Pergola Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/retractable-louvered-pergola/' | url }}" class="hover-color" target="_blank">Retractable Louvered Pergola Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1O_eJoODezYJDMCoN1lxlRwixt6Bv4X1o/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/zip-screen.webp" width="800" height="700" class="img-responsive" alt="Zip Screen Catalog">
-            <img src="/static/products/zip-screen.jpg" width="800" height="700" class="img-responsive" alt="Zip Screen Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/zip-screen.webp' | url }}" width="800" height="700" class="img-responsive" alt="Zip Screen Catalog">
+            <img src="{{ '/static/products/zip-screen.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Zip Screen Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/zip-screen/" class="hover-color" target="_blank">Zip Screen Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/zip-screen/' | url }}" class="hover-color" target="_blank">Zip Screen Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/drive/folders/1uaB2d2grZGR3lcDAfKIf9z5XoKjPt1aV?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/window-awning.webp" width="800" height="700" class="img-responsive" alt="Window Awning Catalog">
-            <img src="/static/products/window-awning.jpg" width="800" height="700" class="img-responsive" alt="Window Awning Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/window-awning.webp' | url }}" width="800" height="700" class="img-responsive" alt="Window Awning Catalog">
+            <img src="{{ '/static/products/window-awning.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Window Awning Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/window-awning/" class="hover-color" target="_blank">Window Awning Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/window-awning/' | url }}" class="hover-color" target="_blank">Window Awning Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1IgoBvao8s_PC4obMYGAp-d8jYUnQwlYo/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/original-awning.webp" width="800" height="700" class="img-responsive" alt="Original Awning Catalog">
-            <img src="/static/products/original-awning.jpg" width="800" height="700" class="img-responsive" alt="Original Awning Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/original-awning.webp' | url }}" width="800" height="700" class="img-responsive" alt="Original Awning Catalog">
+            <img src="{{ '/static/products/original-awning.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Original Awning Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/original-awning/" class="hover-color" target="_blank">Original Awning Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/original-awning/' | url }}" class="hover-color" target="_blank">Original Awning Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1B6geeGCtGaDNC0ycPz6v4knx34apuVpk/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/fabric-roof-blind.webp" width="800" height="700" class="img-responsive" alt="Fabric Roof Blind Catalog">
-            <img src="/static/products/fabric-roof-blind.jpg" width="800" height="700" class="img-responsive" alt="Fabric Roof Blind Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/fabric-roof-blind.webp' | url }}" width="800" height="700" class="img-responsive" alt="Fabric Roof Blind Catalog">
+            <img src="{{ '/static/products/fabric-roof-blind.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Fabric Roof Blind Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/fabric-roof-blind/" class="hover-color" target="_blank">Fabric Roof Blind Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/fabric-roof-blind/' | url }}" class="hover-color" target="_blank">Fabric Roof Blind Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/drive/folders/10QYDAEGYo4xTjBzwP9jQshS81AyK1H8i?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/aluminum-alloy-roof-roller-shutters.webp" width="800" height="700" class="img-responsive" alt="Aluminum Alloy Roof Roller Shutters Catalog">
-            <img src="/static/products/aluminum-alloy-roof-roller-shutters.jpg" width="800" height="700" class="img-responsive" alt="Aluminum Alloy Roof Roller Shutters Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/aluminum-alloy-roof-roller-shutters.webp' | url }}" width="800" height="700" class="img-responsive" alt="Aluminum Alloy Roof Roller Shutters Catalog">
+            <img src="{{ '/static/products/aluminum-alloy-roof-roller-shutters.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Aluminum Alloy Roof Roller Shutters Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/aluminum-alloy-roof-roller-shutters/" class="hover-color" target="_blank">Aluminum Alloy Roof Roller Shutters Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/aluminum-alloy-roof-roller-shutters/' | url }}" class="hover-color" target="_blank">Aluminum Alloy Roof Roller Shutters Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1ZfdP-WJvSbH5YidOI62ZoY499nczZP6u/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/standard-garden-dome-igloo.webp" width="800" height="700" class="img-responsive" alt="Standard Garden Dome Igloo Catalog">
-            <img src="/static/products/standard-garden-dome-igloo.jpg" width="800" height="700" class="img-responsive" alt="Standard Garden Dome Igloo Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/standard-garden-dome-igloo.webp' | url }}" width="800" height="700" class="img-responsive" alt="Standard Garden Dome Igloo Catalog">
+            <img src="{{ '/static/products/standard-garden-dome-igloo.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Standard Garden Dome Igloo Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/standard-garden-dome-igloo/" class="hover-color" target="_blank">Standard Garden Dome Igloo Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/standard-garden-dome-igloo/' | url }}" class="hover-color" target="_blank">Standard Garden Dome Igloo Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1E3v6DAQvEHDoWN0mdy2Q6U7tJDwJy04_/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/luxury-garden-dome-igloo.webp" width="800" height="700" class="img-responsive" alt="Luxury Garden Dome Igloo Catalog">
-            <img src="/static/products/luxury-garden-dome-igloo.jpg" width="800" height="700" class="img-responsive" alt="Luxury Garden Dome Igloo Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/luxury-garden-dome-igloo.webp' | url }}" width="800" height="700" class="img-responsive" alt="Luxury Garden Dome Igloo Catalog">
+            <img src="{{ '/static/products/luxury-garden-dome-igloo.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Luxury Garden Dome Igloo Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/luxury-garden-dome-igloo/" class="hover-color" target="_blank">Luxury Garden Dome Igloo Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/luxury-garden-dome-igloo/' | url }}" class="hover-color" target="_blank">Luxury Garden Dome Igloo Catalog</a></p>
     </div>
     <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-6 margin-btm-20">
       <div class="img-width-800 image-margin-center margin-btm-10">
         <a href="https://drive.google.com/file/d/1QZXft1riSl7cfnDaQmV3oaYCbj1vH6G2/view?usp=sharing" target="_blank">
           <picture>
-            <source type="image/webp" srcset="/static/products/modular-building-cabin-space-capsule.webp" width="800" height="700" class="img-responsive" alt="Modular Building Cabin Space Capsule Catalog">
-            <img src="/static/products/modular-building-cabin-space-capsule.jpg" width="800" height="700" class="img-responsive" alt="Modular Building Cabin Space Capsule Catalog">
+            <source type="image/webp" srcset="{{ '/static/products/modular-building-cabin-space-capsule.webp' | url }}" width="800" height="700" class="img-responsive" alt="Modular Building Cabin Space Capsule Catalog">
+            <img src="{{ '/static/products/modular-building-cabin-space-capsule.jpg' | url }}" width="800" height="700" class="img-responsive" alt="Modular Building Cabin Space Capsule Catalog">
           </picture>
         </a>
       </div>
-      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="/modular-building-cabin-space-capsule/" class="hover-color" target="_blank">Modular Building Cabin Space Capsule Catalog</a></p>
+      <p class="font-size-18 text-center font-weight-700 catalog-title-height"><a href="{{ '/modular-building-cabin-space-capsule/' | url }}" class="hover-color" target="_blank">Modular Building Cabin Space Capsule Catalog</a></p>
     </div>
   </div>
 </div>
     <div class="img-pr">
       <div class="hidden-md hidden-xs hidden-sm">
         <picture>
-          <source type="image/webp" srcset="/static/assets/faq-support.webp" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
-          <img src="/static/assets/faq-support.jpg" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support.webp' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support.jpg' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
         </picture>
       </div>
       <div class="hidden-lg hidden-xl hidden-xxl">
         <picture>
-          <source type="image/webp" srcset="/static/assets/faq-support-small.webp" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
-          <img src="/static/assets/faq-support-small.jpg" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support-small.webp' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support-small.jpg' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
         </picture>
       </div>
       <div class="img-text text-center width-bf95">
         <p class="font-comfortaa font-size-28 font-weight-700 margin-btm-20">FAQ & Support</p>
         <p class="margin-btm-40">Do you have any questions? We will be more than happy to solve your doubts, whether you are an individual or a professional.</p>
-        <a href="/contact/" class="btn btn-primary btn-radius">Contact Us</a>
+        <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-radius">Contact Us</a>
       </div>
     </div>
 {% endblock %}

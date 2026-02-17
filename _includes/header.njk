@@ -4,19 +4,19 @@
         <div class="container">
           <ul class="luxbar-navigation">
             <li class="luxbar-header">
-              <a href="/">
+              <a href="{{ '/' | url }}">
                 <picture>
-                  <source type="image/webp" srcset="/static/assets/hazo_logo.webp" height="35" alt="HAZO Logo">
-                  <img src="/static/assets/hazo_logo.png" height="35" alt="HAZO Logo">
+                  <source type="image/webp" srcset="{{ '/static/assets/hazo_logo.webp' | url }}" height="35" alt="HAZO Logo">
+                  <img src="{{ '/static/assets/hazo_logo.png' | url }}" height="35" alt="HAZO Logo">
                 </picture>
               </a>
               <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
             </li>
-            <li class="luxbar-item{% if activeNav == "home" %} active{% endif %}"><a href="/">Home</a></li>
+            <li class="luxbar-item{% if activeNav == "home" %} active{% endif %}"><a href="{{ '/' | url }}">Home</a></li>
             <li class="luxbar-item{% if activeNav == "products" %} active{% endif %}"><a href="#" data-bs-toggle="modal" data-bs-target="#allproducts">Products</a></li>
-            <li class="luxbar-item{% if activeNav == "catalog" %} active{% endif %}"><a href="/catalog/">Catalog</a></li>
-            <li class="luxbar-item{% if activeNav == "about" %} active{% endif %}"><a href="/about/">About</a></li>
-            <li class="luxbar-item{% if activeNav == "contact" %} active{% endif %}"><a href="/contact/">Contact</a></li>
+            <li class="luxbar-item{% if activeNav == "catalog" %} active{% endif %}"><a href="{{ '/catalog/' | url }}">Catalog</a></li>
+            <li class="luxbar-item{% if activeNav == "about" %} active{% endif %}"><a href="{{ '/about/' | url }}">About</a></li>
+            <li class="luxbar-item{% if activeNav == "contact" %} active{% endif %}"><a href="{{ '/contact/' | url }}">Contact</a></li>
           </ul>
         </div>
       </div>

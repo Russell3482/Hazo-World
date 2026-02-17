@@ -6,14 +6,14 @@
   <meta name="applicable-device" content="pc,mobile">
   <link rel="shortcut icon" href="https://davisawning.com/favicon.ico">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/static/css/global.css">
+  <link rel="stylesheet" type="text/css" href="{{ '/static/css/global.css' | url }}">
   {% block head %}{% endblock %}
 </head>
 <body>
   {% include "header.njk" %}
   {% block content %}{% endblock %}
   {% include "footer.njk" %}
-  <script src="/assets/bootstrap.bundle.min.js"></script>
+  <script src="{{ '/assets/bootstrap.bundle.min.js' | url }}"></script>
   <script>
     function closebar_cookie() {
       document.getElementById("cookie-bar").style.display = "none";
