@@ -36,6 +36,8 @@ jobs:
 
       - name: Build site for GitHub Pages
         run: npm run build:ghpages
+        env:
+          ELEVENTY_PATH_PREFIX: /${{ github.event.repository.name }}/
 
       - name: Disable Jekyll processing
         run: touch build/.nojekyll

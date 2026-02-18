@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "eleventy --serve --watch",
     "build": "eleventy",
-    "build:ghpages": "set ELEVENTY_PATH_PREFIX=/Hazo-World/&& eleventy"
+    "build:ghpages": "eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
