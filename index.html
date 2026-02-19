@@ -39,8 +39,8 @@
     <div class="carousel-item " data-bs-interval="3000">
       <a href="{{ '/about/' | url }}">
         <picture>
-          <source type="image/webp" srcset="{{ '/static/home/billboard-about.webp' | url }}" width="1920" height="700" alt="About DAVIS" class="img-responsive">
-          <img src="{{ '/static/home/billboard-about.jpg' | url }}" width="1920" height="700" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/home/folding-arm-awning.webp' | url }}" width="1920" height="700" alt="Folding Arm Awning" class="img-responsive">
+          <img src="{{ '/static/home/folding-arm-awning.jpg' | url }}" width="1920" height="700" alt="Folding Arm Awning" class="img-responsive">
         </picture>
       </a>
     </div>
@@ -61,12 +61,6 @@
 <div id="carouselExampleAutoplayingsmall" class="carousel slide carousel-fade hidden-md hidden-lg hidden-xl hidden-xxl" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="3000">
-        <picture>
-          <source type="image/webp" srcset="{{ '/static/home/billboard-251017-small.webp' | url }}" width="1000" height="1000" alt="DAVIS" class="img-responsive">
-          <img src="{{ '/static/home/billboard-251017-small.jpg' | url }}" width="1000" height="1000" alt="DAVIS" class="img-responsive">
-        </picture>
-    </div>
-    <div class="carousel-item " data-bs-interval="3000">
       <a href="{{ '/retractable-roof/' | url }}">
         <picture>
           <source type="image/webp" srcset="{{ '/static/home/billboard-retractable-roof-small.webp' | url }}" width="1000" height="1000" alt="Retractable Roof" class="img-responsive">
@@ -85,8 +79,8 @@
     <div class="carousel-item " data-bs-interval="3000">
       <a href="{{ '/about/' | url }}">
         <picture>
-          <source type="image/webp" srcset="{{ '/static/home/billboard-about-small.webp' | url }}" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
-          <img src="{{ '/static/home/billboard-about-small.jpg' | url }}" width="1000" height="1000" alt="About DAVIS" class="img-responsive">
+          <source type="image/webp" srcset="{{ '/static/home/folding-arm-awning-small.png' | url }}" width="1000" height="1000" alt="Folding Arm Awning" class="img-responsive">
+          <img src="{{ '/static/home/folding-arm-awning-small.png' | url }}" width="1000" height="1000" alt="Folding Arm Awning" class="img-responsive">
         </picture>
       </a>
     </div>
@@ -464,23 +458,5 @@
     </div>
   </div>
 </div>
-    <div class="img-pr">
-      <div class="hidden-md hidden-xs hidden-sm">
-        <picture>
-          <source type="image/webp" srcset="{{ '/static/assets/faq-support.webp' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
-          <img src="{{ '/static/assets/faq-support.jpg' | url }}" alt="FAQ & Support" width="3840" height="1000" class="img-responsive">
-        </picture>
-      </div>
-      <div class="hidden-lg hidden-xl hidden-xxl">
-        <picture>
-          <source type="image/webp" srcset="{{ '/static/assets/faq-support-small.webp' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
-          <img src="{{ '/static/assets/faq-support-small.jpg' | url }}" alt="FAQ & Support" width="1000" height="900" class="img-responsive">
-        </picture>
-      </div>
-      <div class="img-text text-center width-bf95">
-        <p class="font-comfortaa font-size-28 font-weight-700 margin-btm-20">FAQ & Support</p>
-        <p class="margin-btm-40">Do you have any questions? We will be more than happy to solve your doubts, whether you are an individual or a professional.</p>
-        <a href="{{ '/contact/' | url }}" class="btn btn-primary btn-radius">Contact Us</a>
-      </div>
-    </div>
+{% include "faq-support.njk" %}
 {% endblock %}
