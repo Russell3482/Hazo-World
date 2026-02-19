@@ -34,12 +34,26 @@
   <meta name="apple-mobile-web-app-title" content="HAZO World">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ '/static/css/global.css' | url }}">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function timestamp() {
+      var response = document.getElementById("g-recaptcha-response");
+      if (response == null || response.value.trim() == "") {
+        var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+        elems["ts"] = JSON.stringify(new Date().getTime());
+        document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
+      }
+    }
+    setInterval(timestamp, 500);
+  </script>
+
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "image": "{{ '/static/about/about.jpg' | url }}",
-      "name": "DAVIS",
+      "name": "HAZO WORLD PTY LTD.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Level 5, 7 Eden Park Drive, North Ryde",
@@ -86,7 +100,7 @@
         "@type": "ListItem",
         "position": 2,
         "name": "{{ breadcrumbTitle }}",
-        "item": "https://.com{{ pageUrl }}"
+        "item": "https://hazoworld.com/{{ pageUrl }}"
       }]
     }
   </script>
@@ -146,14 +160,14 @@
       });
     });
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G64KLDXVRF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+{#  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G64KLDXVRF"></script>#}
+{#  <script>#}
+{#    window.dataLayer = window.dataLayer || [];#}
+{#    function gtag(){dataLayer.push(arguments);}#}
+{#    gtag('js', new Date());#}
 
-    gtag('config', 'G-G64KLDXVRF');
-  </script>
+{#    gtag('config', 'G-G64KLDXVRF');#}
+{#  </script>#}
   <script>
     window.addEventListener('load', function (event) {
       document.querySelectorAll('[href*="mailto:"]').forEach(function (e) {
