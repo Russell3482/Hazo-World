@@ -1,3 +1,36 @@
+<script>
+  // reCAPTCHA 回调：验证成功 -> 启用按钮
+  function onRecaptchaSuccess() {
+    const btn = document.getElementById('submitBtn');
+    const hint = document.getElementById('captchaHint');
+    if (btn) btn.disabled = false;
+    if (hint) hint.style.display = 'none';
+  }
+
+  // 过期/失效 -> 再禁用按钮
+  function onRecaptchaExpired() {
+    const btn = document.getElementById('submitBtn');
+    if (btn) btn.disabled = true;
+  }
+
+  // 用户用 DevTools 解除 disabled，也会被拦截
+  window.addEventListener('load', function () {
+    const form = document.querySelector('form[action*="servlet.WebToLead"]');
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      const response = document.getElementById('g-recaptcha-response');
+      const ok = response && response.value && response.value.trim() !== '';
+      if (!ok) {
+        e.preventDefault();
+        const btn = document.getElementById('submitBtn');
+        const hint = document.getElementById('captchaHint');
+        if (btn) btn.disabled = true;
+        if (hint) hint.style.display = 'block';
+      }
+    });
+  });
+</script>
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5g0000097hss"
       method="POST"
       class="margin-top-20 margin-btm-40">
@@ -65,14 +98,16 @@
                    required>
         </div>
 
-        <!-- Lead Record Type -->
-        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <select class="form-control margin-btm-20" id="recordType" name="recordType" required>
-                <option value="">* Lead Record Type</option>
-                <option value="0125g000000hxXu">Commercial Lead User</option> <!-- todo force
- -->                <option value="0125g000000hsee">Private User Lead</option>
-            </select>
-        </div>
+{#        <!-- Lead Record Type -->#}
+{#        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">#}
+{#            <select class="form-control margin-btm-20" id="recordType" name="recordType" required>#}
+{#                <option value="">* Lead Record Type</option>#}
+{#                <option value="0125g000000hxXu">Commercial Lead User</option> <!-- todo force#}
+{# -->                <option value="0125g000000hsee">Private User Lead</option>#}
+{#            </select>#}
+{#        </div>#}
+        <!-- Lead Record Type: fix to Commercial Lead User -->
+        <input type="hidden" id="recordType" name="recordType" value="0125g000000hxXu">
     </div>
 
     <!-- Message：Salesforce 默认字段名是 description -->
@@ -83,11 +118,20 @@
               required></textarea>
 
     <!-- reCAPTCHA -->
+    <!-- reCAPTCHA -->
     <div class="margin-btm-20">
-        <div class="g-recaptcha" data-sitekey="6LdIaHAsAAAAAFPOE-mYxhxlIUCwglNRMaZKS0n2"></div>
+        <div class="g-recaptcha"
+             data-sitekey="6LdIaHAsAAAAAFPOE-mYxhxlIUCwglNRMaZKS0n2"
+             data-callback="onRecaptchaSuccess"
+             data-expired-callback="onRecaptchaExpired"></div>
     </div>
 
     <div class="text-center">
-        <button type="submit" class="btn btn-primary btn-radius">Send it NOW</button>
+        <button id="submitBtn" type="submit" class="btn btn-primary btn-radius" disabled>
+            Send it NOW
+        </button>
+        <p id="captchaHint" class="margin-top-10" style="display:none; opacity:.8;">
+            Please complete the reCAPTCHA to submit.
+        </p>
     </div>
 </form>
