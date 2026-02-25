@@ -122,43 +122,64 @@
     gtag('set', 'url_passthrough', true);
     gtag('set', 'ads_data_redaction', true);
   </script>
+
   <script>
-    if (localStorage['gtag.consent.option'] !== undefined) {
-      const option = JSON.parse(localStorage['gtag.consent.option']);
-      gtag('consent', 'update', option);
+    const saved = localStorage.getItem('gtag.consent.option');
+    if (saved) {
+      try {
+        gtag('consent', 'update', JSON.parse(saved));
+      } catch (e) {}
     }
   </script>
+
   <script>
-    window.addEventListener('load',function() {
-      document.addEventListener('click', function (e) {
-      const btnAcceptCookie = e.target.closest('#cookie-bar > div > button.btn.btn-primary.btn-radius.margin-right-15');
-        if (btnAcceptCookie === null) return;
-        const option = {
-          'analytics_storage': 'granted',
-          'ad_storage': 'granted',
-          'ad_user_data': 'granted',
-          'ad_personalization': 'granted'
-        };
-        gtag('consent', 'update', option);
-        localStorage['gtag.consent.option'] = JSON.stringify(option);
+    (function () {
+      const KEY = 'gtag.consent.option';
+      const saved = localStorage.getItem(KEY);
+
+      // 恢复用户上次选择
+      if (saved) {
+        try { gtag('consent', 'update', JSON.parse(saved)); } catch (e) {}
+      }
+
+      // DOM好了就判断：没选过才淡入
+      document.addEventListener('DOMContentLoaded', function () {
+        const bar = document.getElementById('cookie-bar');
+        if (!bar) return;
+
+        if (!saved) {
+          requestAnimationFrame(() => bar.classList.add('is-visible'));
+        }
       });
-    });
-  </script>
-  <script>
-    window.addEventListener('load',function() {
+
+      // 统一处理 Accept/Reject（建议用更稳的选择器）
       document.addEventListener('click', function (e) {
-      const btnRejectCookie = e.target.closest('#cookie-bar > div > button.btn.btn-transparent.btn-radius');
-        if (btnRejectCookie === null) return;
-        const option = {
-          'analytics_storage': 'denied',
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied'
+        const bar = document.getElementById('cookie-bar');
+        if (!bar) return;
+
+        const acceptBtn = e.target.closest('#cookie-bar .btn.btn-primary');
+        const rejectBtn = e.target.closest('#cookie-bar .btn.btn-transparent');
+        if (!acceptBtn && !rejectBtn) return;
+
+        const option = acceptBtn ? {
+          analytics_storage: 'granted',
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted'
+        } : {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
         };
-        gtag('consent', 'update', option);
-        localStorage.removeItem('gtag.consent.option');
+
+        try { gtag('consent', 'update', option); } catch (e) {}
+        localStorage.setItem(KEY, JSON.stringify(option));
+
+        // 淡出隐藏（不再用 display:none，避免硬切）
+        bar.classList.remove('is-visible');
       });
-    });
+    })();
   </script>
 {#  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G64KLDXVRF"></script>#}
 {#  <script>#}

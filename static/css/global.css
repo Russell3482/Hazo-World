@@ -1372,11 +1372,29 @@ table td[class*="col-"], table th[class*="col-"] {
     }
 }
 
-.cookie-bar {
+
+/* cookie bar 默认隐藏，避免闪屏 */
+.cookie-bar{
+    position: fixed;
+    left: 0;
+    right: 0;
     bottom: 0;
     width: 100%;
+    z-index: 9999;
     background-color: #f2f2f2;
     box-shadow: 0 -1px 10px 0 rgba(172, 171, 171, .3);
+
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity .25s ease, transform .25s ease;
+}
+
+/* 需要显示时再淡入 */
+.cookie-bar.is-visible{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
 }
 
 .btn-close {

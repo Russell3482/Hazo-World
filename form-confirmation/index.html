@@ -1,0 +1,125 @@
+{% extends "base.njk" %}
+{% set activeNav = "" %}
+{% set pageTitle = "Thanks for inquiry" %}
+{% set pageOgImage = '/static/assets/leader.jpg' | url %}
+
+{% block head %}
+<style>
+    .ty-type{
+        display: inline-block;
+        color: #fff;
+    }
+
+
+    .ty-hero-text{
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 0 16px;
+        color: #fff;
+    }
+
+    /*  fade in effect for content after typing */
+    .ty-fade{
+        opacity: 0;
+        transform: translateY(6px);
+        transition: opacity .9s ease, transform .9s ease;
+    }
+    .ty-fade.is-visible{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* 小屏字号调整 */
+    @media (max-width: 576px){
+        .ty-type.font-size-30{ font-size: 22px !important; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="margin-top-58"></div>
+
+<div class="bg-grey padding-top-60 padding-btm-60">
+  <div class="container">
+    <div class="img-pr img-dark-mask">
+
+      <div class="hidden-md hidden-xs hidden-sm">
+        <picture>
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support.webp' | url }}" alt="Thank you" style="filter: brightness(0.3);" width="3840" height="1000" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support.jpg' | url }}" alt="Thank you" width="3840" height="1000" style="filter: brightness(0.3);" class="img-responsive">
+        </picture>
+      </div>
+
+      <div class="hidden-lg hidden-xl hidden-xxl">
+        <picture>
+          <source type="image/webp" srcset="{{ '/static/assets/faq-support-small.webp' | url }}" alt="Thank you" style="filter: brightness(0.3);" width="1000" height="900" class="img-responsive">
+          <img src="{{ '/static/assets/faq-support-small.jpg' | url }}" alt="Thank you" width="1000" height="900" style="filter: brightness(0.3);" class="img-responsive">
+        </picture>
+      </div>
+
+
+      <div class="img-text text-center width-bf95">
+        <div class="ty-hero-text">
+
+          <!-- Thank You box-->
+          <p class="font-size-14 font-weight-700 margin-btm-15"
+             style="letter-spacing:.12em; text-transform:uppercase; color: rgba(255,255,255,.85);">
+            Thank You
+          </p>
+
+          <!-- typing effect -->
+          <p class="margin-btm-20">
+            <span id="tyType" class="ty-type font-size-30 font-weight-700"></span>
+          </p>
+
+          <!-- fade in after typing -->
+          <div id="tyAfter" class="ty-fade">
+            <p class="font-size-18 margin-btm-15">We’ll be in touch shortly.</p>
+            <p class="margin-btm-25" style="color: rgba(255,255,255,.9);">
+              Someone on our team is reviewing your request now.
+            <p class="margin-btm-25" style="color: rgba(255,255,255,.9);">
+              We’ll use all the information you’ve provided
+              to make sure we connect you with the best person on our team to address what you need.
+            </p>
+
+            <div>
+              <a class="btn btn-primary btn-radius" href="{{ '/' | url }}">Back to Home</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const text = "Your enquiry was submitted successfully";
+    const el = document.getElementById("tyType");
+    const after = document.getElementById("tyAfter");
+    if (!el) return;
+
+    let i = 0;
+    const speed = 35;
+
+    function tick() {
+      el.textContent = text.slice(0, i);
+      i++;
+
+      if (i <= text.length) {
+        setTimeout(tick, speed);
+      } else {
+        // 打字结束后淡入下面内容
+        if (after) {
+          // 触发 transition
+          requestAnimationFrame(() => after.classList.add("is-visible"));
+        }
+      }
+    }
+
+    tick();
+  })();
+</script>
+{% endblock %}
