@@ -89,7 +89,7 @@
     </div>
     <div class="bg-grey text-center padding-top-20 padding-btm-20">HAZO WOLRD PTY LTD. | <a href="{{ '/sitemap.xml' | url }}" class="hover-color" target="_blank">Sitemap</a></div>
     <div class="feedback">
-      <a href="{% if plainFeedbackLink %}#get-a-free-quote{% else %}#{% endif %}"{% if not plainFeedbackLink %} data-bs-toggle="modal" data-bs-target="#get-a-free-quote"{% endif %} title="Get a Free Quote">
+      <a href="{% if not showFeedBackDialog %}#get-a-free-quote{% else %}#{% endif %}"{% if showFeedBackDialog %} data-bs-toggle="modal" data-bs-target="#get-a-free-quote"{% endif %} title="Get a Free Quote">
         <picture>
           <source type="image/webp" srcset="{{ '/static/assets/contact-support.webp' | url }}" width="35" height="33" alt="Get a Free Quote">
           <img src="{{ '/static/assets/contact-support.png' | url }}" width="35" height="33" alt="Get a Free Quote">
@@ -204,16 +204,18 @@
       </div>
     </div>
 
-    <div class="modal fade" id="get-a-free-quote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <p class="font-nunito-sans modal-title font-size-20 text-black font-weight-700" id="exampleModalLabel">How Can We Help You</p>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            {% include "product-quote-form.njk" %}
-          </div>
+{% if showFeedBackDialog %}
+  <div class="modal fade" id="get-a-free-quote" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="font-nunito-sans modal-title font-size-20 text-black font-weight-700" id="exampleModalLabel">How Can We Help You</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {% include "product-quote-form.njk" %}
         </div>
       </div>
     </div>
+  </div>
+{% endif %}
