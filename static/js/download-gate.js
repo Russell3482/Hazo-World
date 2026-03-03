@@ -1,4 +1,3 @@
-console.log("[download-gate] loaded");
 (() => {
   /**
    * Download Gate

@@ -1130,6 +1130,38 @@ img {
     border-color: #233C3C;
 }
 
+/* disabled button */
+.btn:disabled,
+.btn.disabled,
+fieldset:disabled .btn {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 1; /* 不想变透明就保持 1 */
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+fieldset:disabled .btn-primary {
+    color: #ffffff;
+    background-color: #b7b7b7;
+    border-color: #b7b7b7;
+}
+
+/* 防止 hover / focus / active 改色 */
+.btn-primary:disabled:hover,
+.btn-primary.disabled:hover,
+fieldset:disabled .btn-primary:hover,
+.btn-primary:disabled:focus,
+.btn-primary.disabled:focus,
+fieldset:disabled .btn-primary:focus,
+.btn-primary:disabled:active,
+.btn-primary.disabled:active,
+fieldset:disabled .btn-primary:active {
+    color: #ffffff;
+    background-color: #b7b7b7;
+    border-color: #b7b7b7;
+    box-shadow: none;
+}
 
 .btn-transparent {
     color: #2c2c2c;

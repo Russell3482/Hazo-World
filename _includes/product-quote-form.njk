@@ -27,6 +27,8 @@
         const hint = document.getElementById('captchaHint');
         if (btn) btn.disabled = true;
         if (hint) hint.style.display = 'block';
+      } else {
+        localStorage.setItem("hazo_quote_submitted_v1", "1"); // 标记已提交过报价单了
       }
     });
   });
