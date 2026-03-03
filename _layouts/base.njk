@@ -35,7 +35,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&amp;family=Roboto+Condensed:wght@400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ '/static/css/global.css' | url }}">
   <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script
+          src="https://www.google.com/recaptcha/api.js?render=explicit"
+          async
+          defer></script>
+  <script src="{{ '/static/js/download-gate.js' | url }}" defer></script>
   <script>
     function timestamp() {
       var response = document.getElementById("g-recaptcha-response");

@@ -39,7 +39,10 @@
       <p><span class="text-primary margin-right-8"></span>Star hotels, high-end clubs, office buildings, villas and other outdoor places</p>
 <span class="text-primary margin-right-8"></span>Balconies, courtyards, private residential areas, etc.
 
-      <p class="margin-top-30"><a href="https://drive.google.com/drive/folders/1uaB2d2grZGR3lcDAfKIf9z5XoKjPt1aV?usp=sharing" class="btn btn-primary btn-radius" target="_blank">Catalog Download</a></p>
+      <p class="margin-top-30">
+        {% set dg = { link: "https://app.pandadoc.com/document/v2?token=5372fccba96b221497ca6a2ee65843647ee09d66", text: "Catalog Download" } %}
+        {% include "download-gate-button.njk" %}
+      </p>
       <div class="row margin-top-40">
         <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 margin-btm-20">
           <div class="img-width-100 image-margin-center">

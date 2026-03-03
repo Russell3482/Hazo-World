@@ -1,6 +1,5 @@
 ﻿{% extends "base.njk" %}
 {% set activeNav = "products" %}
-{% set showLanguageLink = false %}
 {% set showFeedBackDialog = false %}
 {% set pageUrl = '/original-awning/' %}
 {% set pageTitle = "Original Awning" %}
@@ -39,7 +38,10 @@
       <p><span class="text-primary margin-right-8"></span>Shops, hotels, villas and other outdoor places.</p>
 <span class="text-primary margin-right-8"></span>Terraces, restaurants, gardens, private residential areas, etc.
 
-      <p class="margin-top-30"><a href="https://drive.google.com/file/d/1IgoBvao8s_PC4obMYGAp-d8jYUnQwlYo/view?usp=sharing" class="btn btn-primary btn-radius" target="_blank">Catalog Download</a></p>
+      <p class="margin-top-30">
+      {% set dg = { link: "https://app.pandadoc.com/document/v2?token=d1f2b0f12fa25c5eb299893684fbffa7222b5481", text: "Catalog Download" } %}
+      {% include "download-gate-button.njk" %}
+      </p>
       <div class="row margin-top-40">
         <div class="col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 margin-btm-20">
           <div class="img-width-100 image-margin-center">

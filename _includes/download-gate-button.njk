@@ -1,0 +1,15 @@
+{# _includes/download-gate-button.njk #}
+{% if dg and dg.link %}
+    <a
+            href="{{ dg.link }}"
+            class="btn btn-primary btn-radius"
+            data-download-gate
+            data-link="{{ dg.link }}"
+    >
+        {{ dg.text or "Download" }}
+    </a>
+{% else %}
+    <button type="button" class="btn btn-primary btn-radius" disabled title="Missing download link">
+        Download
+    </button>
+{% endif %}
