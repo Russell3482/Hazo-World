@@ -43,9 +43,6 @@
     <input type="hidden" name="oid" value="00D5g0000097hss">
     <input type="hidden" name="retURL" value="http://hazoworld.com">
 
-{# todo first name, last name, email company phone, lead record type message #}
-{#    <input class="form-control-new" type="text" name="url" value="http://hazoworld.com{{ pageUrl }}" readonly>#}
-{#    <input class="form-control-new" type="text" name="title" value="{{ pageTitle }}" readonly>#}
 
     <div class="row">
         <!-- First Name -->
@@ -53,9 +50,9 @@
             <input class="form-control margin-btm-20"
                    id="first_name"
                    maxlength="40"
-                   name="first_name"
+                   name="*first_name"
                    type="text"
-                   placeholder="First Name">
+                   placeholder="First Name" required>
         </div>
 
         <!-- Last Name -->
@@ -63,9 +60,9 @@
             <input class="form-control margin-btm-20"
                    id="last_name"
                    maxlength="80"
-                   name="last_name"
+                   name="*last_name"
                    type="text"
-                   placeholder="Last Name">
+                   placeholder="Last Name" required>
         </div>
 
         <!-- Email -->
@@ -73,7 +70,7 @@
             <input class="form-control margin-btm-20"
                    id="email"
                    maxlength="80"
-                   name="email"
+                   name="*email"
                    type="email"
                    placeholder="* Email"
                    required>
@@ -84,9 +81,9 @@
             <input class="form-control margin-btm-20"
                    id="company"
                    maxlength="40"
-                   name="company"
+                   name="*company"
                    type="text"
-                   placeholder="Company">
+                   placeholder="Company" required>
         </div>
 
         <!-- Phone -->
