@@ -39,10 +39,11 @@
 
     <!-- Salesforce required hidden fields -->
     <input type="hidden" name="captcha_settings"
-           value='{"keyname":"hazoworld","fallback":"true","orgId":"00D5g0000097hss","ts":""}'>
+           value='{"keyname":"HazoWorldV2","fallback":"true","orgId":"00D5g0000097hss","ts":""}'
+           id="captcha_settings">
     <input type="hidden" name="oid" value="00D5g0000097hss">
     <input type="hidden" name="retURL" value="http://hazoworld.com/form-confirmation">
-
+    <input type="hidden" id="00NOc000004AUk5" name="00NOc000004AUk5" value="1">
 
     <div class="row">
         <!-- First Name -->
@@ -79,7 +80,7 @@
         <!-- Company -->
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <input class="form-control margin-btm-20"
-                   id="company"
+                   id="Company"
                    maxlength="40"
                    name="company"
                    type="text"
@@ -97,16 +98,9 @@
                    required>
         </div>
 
-{#        <!-- Lead Record Type -->#}
-{#        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">#}
-{#            <select class="form-control margin-btm-20" id="recordType" name="recordType" required>#}
-{#                <option value="">* Lead Record Type</option>#}
-{#                <option value="0125g000000hxXu">Commercial Lead User</option> <!-- todo force#}
-{# -->                <option value="0125g000000hsee">Private User Lead</option>#}
-{#            </select>#}
-{#        </div>#}
-        <!-- Lead Record Type: fix to Commercial Lead User -->
-{#        <input type="hidden" id="recordType" name="recordType" value="0125g000000hxXu">#}
+        <!-- Lead Record Type: hidden, forced to Commercial Lead User -->
+        <!-- record type picklist value (ID) -->
+        <input type="hidden" id="recordType" name="recordType" value="0125g000000hxXuAAI">
     </div>
 
     <!-- Message：Salesforce 默认字段名是 description -->
@@ -117,8 +111,7 @@
               required></textarea>
 
     <!-- reCAPTCHA -->
-    <!-- reCAPTCHA -->
-    <div class="margin-btm-20">
+    <div class="margin-btm-20" id="recaptchaContainer">
         <div class="g-recaptcha"
              data-sitekey="6LegZXksAAAAAE6W4WsHXtoMPtUJ9tmYpCfGlFwJ"
              data-callback="onRecaptchaSuccess"

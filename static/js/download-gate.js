@@ -16,8 +16,8 @@
       "https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D5g0000097hss",
     oid: "00D5g0000097hss",
     captcha_settings:
-      '{"keyname":"hazoworld","fallback":"true","orgId":"00D5g0000097hss","ts":""}',
-    recordType: "0125g000000hxXu",
+      '{"keyname":"HazoWorldV2","fallback":"true","orgId":"00D5g0000097hss","ts":""}',
+    recordType: "0125g000000hxXuAAI",
 
     siteKey: "6LegZXksAAAAAE6W4WsHXtoMPtUJ9tmYpCfGlFwJ",
     modalId: "downloadGateModal",
@@ -57,7 +57,7 @@
                   action="${escapeAttr(CFG.action)}">
               <input type="hidden" name="captcha_settings" value='${escapeHtml(
       CFG.captcha_settings
-    )}'>
+    )}' id="captcha_settings">
               <input type="hidden" name="oid" value="${escapeAttr(CFG.oid)}">
               <input type="hidden" name="retURL" value="${escapeAttr(
       encodeURI(getRetURL())
@@ -66,7 +66,7 @@
       CFG.recordType
     )}">
               <input type="hidden" name="g-recaptcha-response" value="" data-dg-recaptcha-response>
-
+              <input type="hidden" id="00NOc000004AUk5" name="00NOc000004AUk5" value="1">
               <div class="row">
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                   <input class="form-control margin-btm-20"
@@ -84,7 +84,7 @@
                 </div>
 
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                  <input class="form-control margin-btm-20"
+                  <input class="form-control margin-btm-20" id="Company"
                          maxlength="40" name="company" type="text" placeholder="* Company" required>
                 </div>
 
