@@ -94,8 +94,8 @@
                 </div>
               </div>
 
-              <textarea class="form-control height-150 margin-btm-30"
-                        name="description" placeholder="* Message" required></textarea>
+              <textarea class="form-control height-150 margin-btm-30" id="00N5g00000LhwoY" name="00N5g00000LhwoY"
+                        placeholder="* Tell us a bit about your enquiry." required></textarea>
 
               <div class="margin-btm-20">
                 <div data-dg-recaptcha></div>
