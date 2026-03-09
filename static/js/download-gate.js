@@ -112,6 +112,31 @@
 
               <p style="display:none; opacity:.8;" data-dg-error class="margin-top-10 text-danger"></p>
             </form>
+            <script>
+              function onRecaptchaSuccess(token) {
+                const btn = document.getElementById('submitBtn');
+                const hint = document.getElementById('captchaHint');
+                if (btn) btn.disabled = false;
+                if (hint) hint.style.display = 'none';
+            
+                const cs = document.getElementById('captcha_settings');
+                if (cs) {
+                  cs.value = JSON.stringify({
+                    keyname: "HazoWorldV2",
+                    fallback: "true",
+                    orgId: "00D5g0000097hss",
+                    ts: String(Date.now())
+                  });
+                }
+              }
+            
+              function onRecaptchaExpired() {
+                const btn = document.getElementById('submitBtn');
+                const hint = document.getElementById('captchaHint');
+                if (btn) btn.disabled = true;
+                if (hint) hint.style.display = 'block';
+              }
+            </script>
           </div>
         </div>
       </div>
